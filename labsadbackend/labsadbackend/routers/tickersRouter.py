@@ -7,7 +7,7 @@ import os
 
 router = APIRouter(prefix='/tickers', tags=['TICKERS'])
 
-@router.get('/{symbol}', summary="Get ticker data")
+@router.get('/historialData', summary="Get ticker data")
 async def getTicker(symbol: str):
     ticker = yf.Ticker(symbol)
     tickerPrices = ticker.history(period="max")
