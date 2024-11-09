@@ -11,6 +11,8 @@ yfinance = "^0.2.48"
 requests = "^2.32.3"
 pandas = "^2.2.3"
 beautifulsoup4 = "^4.12.3"
+fastapi = "^0.115.4"
+uvicorn = "^0.32.0"
 
 
 [build-system]
