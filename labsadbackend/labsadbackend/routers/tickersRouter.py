@@ -9,7 +9,22 @@ router = APIRouter(prefix='/tickers', tags=['TICKERS'])
 
 @router.get('/', summary="Get all tickers")
 async def getTickers():
-    return {"message": "Hello World"}
+    url = 'https://www.slickcharts.com/sp500'
+
+    request = requests.get(url, headers={'User-Agent': 'Mozilla/5.0'})
+    soup = bs(request.text, "lxml")
+    stats = soup.find('table', class_='table table-hover table-borderless table-sm')
+    df = pd.read_html(str(stats))[0]
+    
+    df['% Chg'] = df['% Chg'].str.strip('()-%')
+    df['% Chg'] = pd.to_numeric(df['% Chg'])
+    df['Chg'] = pd.to_numeric(df['Chg'])
+    
+    df = df.drop(columns=['Chg', '% Chg'])
+    
+    df['Image'] = df['Symbol'].apply(lambda symbol: f'https://assets.parqet.com/logos/symbol/{symbol}?format=png')
+    
+    return df.to_dict(orient='records')
 
 @router.get('/updateTickers', summary="Update all tickers")
 async def updateTickers():
