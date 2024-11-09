@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "labsadbackend"
+version = "0.1.0"
+description = ""
+authors = ["Tiago Nora <33982771+TiagoNora@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.13"
+yfinance = "^0.2.48"
+requests = "^2.32.3"
+pandas = "^2.2.3"
+beautifulsoup4 = "^4.12.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "labsadbackend.main:start"
