@@ -28,7 +28,8 @@ async def updateTickers():
 
     for symbol in df['Symbol']:
         ticker = yf.Ticker(symbol)
-        tickerPrices = ticker.history(period="max", interval="1d")
+        tickerPrices = ticker.history(period="max")
+        print(tickerPrices)
         filename = os.path.join(save_directory, f"{symbol}_daily_data.csv")
-        tickerPrices.to_csv(filename, index=False)
+        tickerPrices.to_csv(filename)
         print(f"Saved data for {symbol} to {filename}")
