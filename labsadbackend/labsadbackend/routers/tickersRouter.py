@@ -7,6 +7,13 @@ import os
 
 router = APIRouter(prefix='/tickers', tags=['TICKERS'])
 
+@router.get('/{symbol}', summary="Get ticker data")
+async def getTicker(symbol: str):
+    ticker = yf.Ticker(symbol)
+    tickerPrices = ticker.history(period="max")
+    tickerPrices.reset_index(inplace=True)
+    return tickerPrices.to_dict(orient='records')
+
 @router.get('/', summary="Get all tickers")
 async def getTickers():
     url = 'https://www.slickcharts.com/sp500'
