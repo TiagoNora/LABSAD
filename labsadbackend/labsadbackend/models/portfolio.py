@@ -11,6 +11,10 @@ class Stock(BaseModel):
     quantity: int
     buyPrice: float
     buyDate: str
+    
+class StockDelete(BaseModel):
+    symbol: str
+    quantity: int
 
 class Portfolio(BaseModel):
     name: str
@@ -27,3 +31,13 @@ class PortfolioUpdate(BaseModel):
 class PortfolioDelete(BaseModel):
     name: str
     email: str
+
+class PortfolioAddTicket(BaseModel):
+    name: str
+    email: str
+    stock: Stock
+
+class PortfolioRemoveTicket(BaseModel):
+    name: str
+    email: str
+    stock: StockDelete

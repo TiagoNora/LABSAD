@@ -72,9 +72,16 @@ async def getTickers():
     df['% Chg'] = pd.to_numeric(df['% Chg'])
     df['Chg'] = pd.to_numeric(df['Chg'])
     
+    df['Image'] = df['Symbol'].apply(lambda symbol: f'https://assets.parqet.com/logos/symbol/{symbol}?format=png')
+    
     df = df.drop(columns=['Chg', '% Chg', "#", "Price", "Weight"])
     
-    return df.to_dict(orient='records')
+    data = df.to_dict(orient='records')
+    #file_path = 'reduced_sp500_tickers.json'
+    #with open(file_path, 'w') as json_file:
+    #    json.dump(data, json_file, indent=4)
+
+    return data
 
 @router.get('/updateTickers', summary="Update all tickers")
 async def updateTickers():

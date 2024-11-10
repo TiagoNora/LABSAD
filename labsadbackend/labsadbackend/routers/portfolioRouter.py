@@ -35,9 +35,13 @@ async def deletePortfolio(portfolioDelete: PortfolioDelete):
     return {"message": "Portfolio deleted successfully"}
 
 @router.post('/addTicket', summary="Add a ticket to a portfolio")
-async def addTicketToPortfolio():
-    pass
+async def addTicketToPortfolio(portfolioAddTicket: PortfolioAddTicket):
+    repo = PortfolioRepo()
+    repo.addTicketPortfolio(portfolioAddTicket)
+    return {"message": "Ticket added successfully"}
 
 @router.delete('/deleteTicket', summary="Delete a ticket from a portfolio")
-async def deleteTicketFromPortfolio():
-    pass
+async def deleteTicketFromPortfolio(portfolioRemoveTicket: PortfolioRemoveTicket):
+    repo = PortfolioRepo()
+    repo.deleteTicketPortfolio(portfolioRemoveTicket)
+    return {"message": "Ticket removed successfully"}

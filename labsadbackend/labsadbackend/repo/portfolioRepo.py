@@ -51,3 +51,11 @@ class PortfolioRepo:
     
     def deletePortfolio(self, portfolioDelete: PortfolioDelete):
         collection.delete_one({"name": portfolioDelete.name, "email": portfolioDelete.email})
+    
+    def addTicketPortfolio(self, portfolioAddTicket: PortfolioAddTicket):
+        collection.update_one({"name": portfolioAddTicket.name, "email": portfolioAddTicket.email},
+                              {"$push": {"stocks": portfolioAddTicket.stock.dict()}})
+    
+    def deleteTicketPortfolio(self, portfolioRemoveTicket: PortfolioRemoveTicket):
+        collection.update_one({"name": portfolioRemoveTicket.name, "email": portfolioRemoveTicket.email},
+                              {"$pull": {"stocks": portfolioRemoveTicket.stock.dict()}})
