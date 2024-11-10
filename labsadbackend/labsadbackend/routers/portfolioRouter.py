@@ -11,8 +11,10 @@ async def getPortfolios(email: str):
     return portfolios
 
 @router.get('/search', summary="Search for a portfolio")
-async def searchPortfolio(name: str):
-    pass
+async def searchPortfolio(name: str, email: str):
+    repo = PortfolioRepo()
+    portfolio = repo.getPortfolio(name, email)
+    return portfolio
 
 @router.post('/create', summary="Create a portfolio")
 async def createPortfolio(portfolioCreate: PortfolioCreate):

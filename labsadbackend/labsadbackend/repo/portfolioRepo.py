@@ -27,3 +27,8 @@ class PortfolioRepo:
             portfolio["_id"] = str(portfolio["_id"])  # Converte o ObjectId para string
             portfolios_list.append(portfolio)
         return jsonable_encoder(portfolios_list)
+
+    def getPortfolio(self, name: str, email: str):
+        portfolio = collection.find_one({"name": name, "email": email})
+        portfolio["_id"] = str(portfolio["_id"])
+        return jsonable_encoder(portfolio)

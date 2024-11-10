@@ -17,4 +17,7 @@ class Portfolio(BaseModel):
     description: str
     email: str
     stocks: List[Stock]
-    
+
+class PortfolioSearch(BaseModel):
+    name: str
+    email: str
