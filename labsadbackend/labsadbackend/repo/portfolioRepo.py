@@ -48,3 +48,6 @@ class PortfolioRepo:
             
         elif portfolioUpdate.newName is None and portfolioUpdate.newDescription is None:
             return {"message": "No changes were made"}
+    
+    def deletePortfolio(self, portfolioDelete: PortfolioDelete):
+        collection.delete_one({"name": portfolioDelete.name, "email": portfolioDelete.email})

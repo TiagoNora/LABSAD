@@ -23,3 +23,7 @@ class PortfolioUpdate(BaseModel):
     newName: Optional[str]
     email: str
     newDescription: Optional[str]
+    
+class PortfolioDelete(BaseModel):
+    name: str
+    email: str

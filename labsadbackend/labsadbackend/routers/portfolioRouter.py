@@ -29,8 +29,10 @@ async def updatePortfolio(portfolioUpdate: PortfolioUpdate):
     return {"message": "Portfolio updated successfully"}
 
 @router.delete('/delete', summary="Delete a portfolio")
-async def deletePortfolio():
-    pass
+async def deletePortfolio(portfolioDelete: PortfolioDelete):
+    repo = PortfolioRepo()
+    repo.deletePortfolio(portfolioDelete)
+    return {"message": "Portfolio deleted successfully"}
 
 @router.post('/addTicket', summary="Add a ticket to a portfolio")
 async def addTicketToPortfolio():
@@ -38,8 +40,4 @@ async def addTicketToPortfolio():
 
 @router.delete('/deleteTicket', summary="Delete a ticket from a portfolio")
 async def deleteTicketFromPortfolio():
-    pass
-
-@router.get('/historialData', summary="Get portfolio data")
-async def getPortfolioData(name: str):
     pass
