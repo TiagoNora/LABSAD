@@ -5,6 +5,8 @@ import requests
 from bs4 import BeautifulSoup as bs
 import os
 import json
+from datetime import datetime, timedelta
+from labsadbackend.repo import *
 
 router = APIRouter(prefix='/tickers', tags=['TICKERS'])
 
@@ -96,3 +98,10 @@ async def updateTickers():
         filename = os.path.join(save_directory, f"{symbol}_daily_data.csv")
         tickerPrices.to_csv(filename)
         print(f"Saved data for {symbol} to {filename}")
+        
+@router.get('/getTickerDataFromDate', summary="Get ticker data from a certain date")
+async def getTickerDataFromDate(symbol: str, date: str):
+    repo = TicketRepo()
+    
+    ticket = await repo.searchValueOfTicketFromDate(symbol, date)
+    return ticket
