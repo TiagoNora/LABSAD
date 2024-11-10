@@ -23,8 +23,10 @@ async def createPortfolio(portfolioCreate: PortfolioCreate):
     return {"message": "Portfolio created successfully"}
 
 @router.put('/update', summary="Update a portfolio")
-async def updatePortfolio():
-    pass
+async def updatePortfolio(portfolioUpdate: PortfolioUpdate):
+    repo = PortfolioRepo()
+    repo.updatePortfolio(portfolioUpdate)
+    return {"message": "Portfolio updated successfully"}
 
 @router.delete('/delete', summary="Delete a portfolio")
 async def deletePortfolio():

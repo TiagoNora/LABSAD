@@ -32,3 +32,19 @@ class PortfolioRepo:
         portfolio = collection.find_one({"name": name, "email": email})
         portfolio["_id"] = str(portfolio["_id"])
         return jsonable_encoder(portfolio)
+    
+    def updatePortfolio(self, portfolioUpdate: PortfolioUpdate):
+        if portfolioUpdate.newName is not None and portfolioUpdate.newDescription is not None:
+            collection.update_one({"name": portfolioUpdate.name, "email": portfolioUpdate.email}, 
+                                  {"$set": {"name": portfolioUpdate.newName, "description": portfolioUpdate.newDescription}})
+            
+        elif portfolioUpdate.newName is not None and portfolioUpdate.newDescription is  None:
+            collection.update_one({"name": portfolioUpdate.name, "email": portfolioUpdate.email}, 
+                                  {"$set": {"name": portfolioUpdate.newName}})
+            
+        elif portfolioUpdate.newName is None and portfolioUpdate.newDescription is not None:
+            collection.update_one({"name": portfolioUpdate.name, "email": portfolioUpdate.email}, 
+                                  {"$set": {"description": portfolioUpdate.newDescription}})
+            
+        elif portfolioUpdate.newName is None and portfolioUpdate.newDescription is None:
+            return {"message": "No changes were made"}

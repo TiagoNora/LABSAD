@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
 
 class PortfolioCreate(BaseModel):
     name: str
@@ -18,6 +18,8 @@ class Portfolio(BaseModel):
     email: str
     stocks: List[Stock]
 
-class PortfolioSearch(BaseModel):
+class PortfolioUpdate(BaseModel):
     name: str
+    newName: Optional[str]
     email: str
+    newDescription: Optional[str]
