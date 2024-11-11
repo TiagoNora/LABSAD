@@ -1,0 +1,2517 @@
+[
+    {
+        "Company": "Nvidia Corp",
+        "Symbol": "NVDA",
+        "Image": "https://assets.parqet.com/logos/symbol/NVDA?format=png"
+    },
+    {
+        "Company": "Apple Inc.",
+        "Symbol": "AAPL",
+        "Image": "https://assets.parqet.com/logos/symbol/AAPL?format=png"
+    },
+    {
+        "Company": "Microsoft Corp",
+        "Symbol": "MSFT",
+        "Image": "https://assets.parqet.com/logos/symbol/MSFT?format=png"
+    },
+    {
+        "Company": "Amazon.com Inc",
+        "Symbol": "AMZN",
+        "Image": "https://assets.parqet.com/logos/symbol/AMZN?format=png"
+    },
+    {
+        "Company": "Meta Platforms, Inc. Class A",
+        "Symbol": "META",
+        "Image": "https://assets.parqet.com/logos/symbol/META?format=png"
+    },
+    {
+        "Company": "Alphabet Inc. Class A",
+        "Symbol": "GOOGL",
+        "Image": "https://assets.parqet.com/logos/symbol/GOOGL?format=png"
+    },
+    {
+        "Company": "Alphabet Inc. Class C",
+        "Symbol": "GOOG",
+        "Image": "https://assets.parqet.com/logos/symbol/GOOG?format=png"
+    },
+    {
+        "Company": "Broadcom Inc.",
+        "Symbol": "AVGO",
+        "Image": "https://assets.parqet.com/logos/symbol/AVGO?format=png"
+    },
+    {
+        "Company": "Berkshire Hathaway Class B",
+        "Symbol": "BRK.B",
+        "Image": "https://assets.parqet.com/logos/symbol/BRK.B?format=png"
+    },
+    {
+        "Company": "Tesla, Inc.",
+        "Symbol": "TSLA",
+        "Image": "https://assets.parqet.com/logos/symbol/TSLA?format=png"
+    },
+    {
+        "Company": "Jpmorgan Chase & Co.",
+        "Symbol": "JPM",
+        "Image": "https://assets.parqet.com/logos/symbol/JPM?format=png"
+    },
+    {
+        "Company": "Eli Lilly & Co.",
+        "Symbol": "LLY",
+        "Image": "https://assets.parqet.com/logos/symbol/LLY?format=png"
+    },
+    {
+        "Company": "Unitedhealth Group Incorporated",
+        "Symbol": "UNH",
+        "Image": "https://assets.parqet.com/logos/symbol/UNH?format=png"
+    },
+    {
+        "Company": "Exxon Mobil Corporation",
+        "Symbol": "XOM",
+        "Image": "https://assets.parqet.com/logos/symbol/XOM?format=png"
+    },
+    {
+        "Company": "Visa Inc.",
+        "Symbol": "V",
+        "Image": "https://assets.parqet.com/logos/symbol/V?format=png"
+    },
+    {
+        "Company": "Mastercard Incorporated",
+        "Symbol": "MA",
+        "Image": "https://assets.parqet.com/logos/symbol/MA?format=png"
+    },
+    {
+        "Company": "Costco Wholesale Corp",
+        "Symbol": "COST",
+        "Image": "https://assets.parqet.com/logos/symbol/COST?format=png"
+    },
+    {
+        "Company": "Home Depot, Inc.",
+        "Symbol": "HD",
+        "Image": "https://assets.parqet.com/logos/symbol/HD?format=png"
+    },
+    {
+        "Company": "Procter & Gamble Company",
+        "Symbol": "PG",
+        "Image": "https://assets.parqet.com/logos/symbol/PG?format=png"
+    },
+    {
+        "Company": "Johnson & Johnson",
+        "Symbol": "JNJ",
+        "Image": "https://assets.parqet.com/logos/symbol/JNJ?format=png"
+    },
+    {
+        "Company": "Walmart Inc.",
+        "Symbol": "WMT",
+        "Image": "https://assets.parqet.com/logos/symbol/WMT?format=png"
+    },
+    {
+        "Company": "Abbvie Inc.",
+        "Symbol": "ABBV",
+        "Image": "https://assets.parqet.com/logos/symbol/ABBV?format=png"
+    },
+    {
+        "Company": "Netflix Inc",
+        "Symbol": "NFLX",
+        "Image": "https://assets.parqet.com/logos/symbol/NFLX?format=png"
+    },
+    {
+        "Company": "Bank of America Corporation",
+        "Symbol": "BAC",
+        "Image": "https://assets.parqet.com/logos/symbol/BAC?format=png"
+    },
+    {
+        "Company": "Salesforce, Inc.",
+        "Symbol": "CRM",
+        "Image": "https://assets.parqet.com/logos/symbol/CRM?format=png"
+    },
+    {
+        "Company": "Oracle Corp",
+        "Symbol": "ORCL",
+        "Image": "https://assets.parqet.com/logos/symbol/ORCL?format=png"
+    },
+    {
+        "Company": "Chevron Corporation",
+        "Symbol": "CVX",
+        "Image": "https://assets.parqet.com/logos/symbol/CVX?format=png"
+    },
+    {
+        "Company": "Merck & Co., Inc.",
+        "Symbol": "MRK",
+        "Image": "https://assets.parqet.com/logos/symbol/MRK?format=png"
+    },
+    {
+        "Company": "Coca-Cola Company",
+        "Symbol": "KO",
+        "Image": "https://assets.parqet.com/logos/symbol/KO?format=png"
+    },
+    {
+        "Company": "Advanced Micro Devices",
+        "Symbol": "AMD",
+        "Image": "https://assets.parqet.com/logos/symbol/AMD?format=png"
+    },
+    {
+        "Company": "Wells Fargo & Co.",
+        "Symbol": "WFC",
+        "Image": "https://assets.parqet.com/logos/symbol/WFC?format=png"
+    },
+    {
+        "Company": "Cisco Systems, Inc.",
+        "Symbol": "CSCO",
+        "Image": "https://assets.parqet.com/logos/symbol/CSCO?format=png"
+    },
+    {
+        "Company": "Accenture Plc",
+        "Symbol": "ACN",
+        "Image": "https://assets.parqet.com/logos/symbol/ACN?format=png"
+    },
+    {
+        "Company": "Pepsico, Inc.",
+        "Symbol": "PEP",
+        "Image": "https://assets.parqet.com/logos/symbol/PEP?format=png"
+    },
+    {
+        "Company": "Linde Plc",
+        "Symbol": "LIN",
+        "Image": "https://assets.parqet.com/logos/symbol/LIN?format=png"
+    },
+    {
+        "Company": "Adobe Inc.",
+        "Symbol": "ADBE",
+        "Image": "https://assets.parqet.com/logos/symbol/ADBE?format=png"
+    },
+    {
+        "Company": "Thermo Fisher Scientific, Inc.",
+        "Symbol": "TMO",
+        "Image": "https://assets.parqet.com/logos/symbol/TMO?format=png"
+    },
+    {
+        "Company": "Mcdonald's Corporation",
+        "Symbol": "MCD",
+        "Image": "https://assets.parqet.com/logos/symbol/MCD?format=png"
+    },
+    {
+        "Company": "Servicenow, Inc.",
+        "Symbol": "NOW",
+        "Image": "https://assets.parqet.com/logos/symbol/NOW?format=png"
+    },
+    {
+        "Company": "Abbott Laboratories",
+        "Symbol": "ABT",
+        "Image": "https://assets.parqet.com/logos/symbol/ABT?format=png"
+    },
+    {
+        "Company": "Texas Instruments Incorporated",
+        "Symbol": "TXN",
+        "Image": "https://assets.parqet.com/logos/symbol/TXN?format=png"
+    },
+    {
+        "Company": "Caterpillar Inc.",
+        "Symbol": "CAT",
+        "Image": "https://assets.parqet.com/logos/symbol/CAT?format=png"
+    },
+    {
+        "Company": "International Business Machines Corporation",
+        "Symbol": "IBM",
+        "Image": "https://assets.parqet.com/logos/symbol/IBM?format=png"
+    },
+    {
+        "Company": "Ge Aerospace",
+        "Symbol": "GE",
+        "Image": "https://assets.parqet.com/logos/symbol/GE?format=png"
+    },
+    {
+        "Company": "Qualcomm Inc",
+        "Symbol": "QCOM",
+        "Image": "https://assets.parqet.com/logos/symbol/QCOM?format=png"
+    },
+    {
+        "Company": "Philip Morris International Inc.",
+        "Symbol": "PM",
+        "Image": "https://assets.parqet.com/logos/symbol/PM?format=png"
+    },
+    {
+        "Company": "Intuit Inc",
+        "Symbol": "INTU",
+        "Image": "https://assets.parqet.com/logos/symbol/INTU?format=png"
+    },
+    {
+        "Company": "Intuitive Surgical Inc.",
+        "Symbol": "ISRG",
+        "Image": "https://assets.parqet.com/logos/symbol/ISRG?format=png"
+    },
+    {
+        "Company": "Goldman Sachs Group Inc.",
+        "Symbol": "GS",
+        "Image": "https://assets.parqet.com/logos/symbol/GS?format=png"
+    },
+    {
+        "Company": "The Walt Disney Company",
+        "Symbol": "DIS",
+        "Image": "https://assets.parqet.com/logos/symbol/DIS?format=png"
+    },
+    {
+        "Company": "Amgen Inc",
+        "Symbol": "AMGN",
+        "Image": "https://assets.parqet.com/logos/symbol/AMGN?format=png"
+    },
+    {
+        "Company": "Verizon Communications",
+        "Symbol": "VZ",
+        "Image": "https://assets.parqet.com/logos/symbol/VZ?format=png"
+    },
+    {
+        "Company": "Comcast Corp",
+        "Symbol": "CMCSA",
+        "Image": "https://assets.parqet.com/logos/symbol/CMCSA?format=png"
+    },
+    {
+        "Company": "Booking Holdings Inc.",
+        "Symbol": "BKNG",
+        "Image": "https://assets.parqet.com/logos/symbol/BKNG?format=png"
+    },
+    {
+        "Company": "American Express Company",
+        "Symbol": "AXP",
+        "Image": "https://assets.parqet.com/logos/symbol/AXP?format=png"
+    },
+    {
+        "Company": "Applied Materials Inc",
+        "Symbol": "AMAT",
+        "Image": "https://assets.parqet.com/logos/symbol/AMAT?format=png"
+    },
+    {
+        "Company": "Morgan Stanley",
+        "Symbol": "MS",
+        "Image": "https://assets.parqet.com/logos/symbol/MS?format=png"
+    },
+    {
+        "Company": "Rtx Corporation",
+        "Symbol": "RTX",
+        "Image": "https://assets.parqet.com/logos/symbol/RTX?format=png"
+    },
+    {
+        "Company": "S&p Global Inc.",
+        "Symbol": "SPGI",
+        "Image": "https://assets.parqet.com/logos/symbol/SPGI?format=png"
+    },
+    {
+        "Company": "Danaher Corporation",
+        "Symbol": "DHR",
+        "Image": "https://assets.parqet.com/logos/symbol/DHR?format=png"
+    },
+    {
+        "Company": "At&t Inc.",
+        "Symbol": "T",
+        "Image": "https://assets.parqet.com/logos/symbol/T?format=png"
+    },
+    {
+        "Company": "Uber Technologies, Inc.",
+        "Symbol": "UBER",
+        "Image": "https://assets.parqet.com/logos/symbol/UBER?format=png"
+    },
+    {
+        "Company": "Nextra Energy, Inc.",
+        "Symbol": "NEE",
+        "Image": "https://assets.parqet.com/logos/symbol/NEE?format=png"
+    },
+    {
+        "Company": "Pfizer Inc.",
+        "Symbol": "PFE",
+        "Image": "https://assets.parqet.com/logos/symbol/PFE?format=png"
+    },
+    {
+        "Company": "Lowe's Companies Inc.",
+        "Symbol": "LOW",
+        "Image": "https://assets.parqet.com/logos/symbol/LOW?format=png"
+    },
+    {
+        "Company": "Progressive Corporation",
+        "Symbol": "PGR",
+        "Image": "https://assets.parqet.com/logos/symbol/PGR?format=png"
+    },
+    {
+        "Company": "Union Pacific Corp.",
+        "Symbol": "UNP",
+        "Image": "https://assets.parqet.com/logos/symbol/UNP?format=png"
+    },
+    {
+        "Company": "Blackrock, Inc.",
+        "Symbol": "BLK",
+        "Image": "https://assets.parqet.com/logos/symbol/BLK?format=png"
+    },
+    {
+        "Company": "Eaton Corporation, Plcs",
+        "Symbol": "ETN",
+        "Image": "https://assets.parqet.com/logos/symbol/ETN?format=png"
+    },
+    {
+        "Company": "Honeywell International, Inc.",
+        "Symbol": "HON",
+        "Image": "https://assets.parqet.com/logos/symbol/HON?format=png"
+    },
+    {
+        "Company": "Tjx Companies, Inc.",
+        "Symbol": "TJX",
+        "Image": "https://assets.parqet.com/logos/symbol/TJX?format=png"
+    },
+    {
+        "Company": "Citigroup Inc.",
+        "Symbol": "C",
+        "Image": "https://assets.parqet.com/logos/symbol/C?format=png"
+    },
+    {
+        "Company": "Vertex Pharmaceuticals Inc",
+        "Symbol": "VRTX",
+        "Image": "https://assets.parqet.com/logos/symbol/VRTX?format=png"
+    },
+    {
+        "Company": "Conocophillips",
+        "Symbol": "COP",
+        "Image": "https://assets.parqet.com/logos/symbol/COP?format=png"
+    },
+    {
+        "Company": "Boston Scientific Corp.",
+        "Symbol": "BSX",
+        "Image": "https://assets.parqet.com/logos/symbol/BSX?format=png"
+    },
+    {
+        "Company": "Blackstone Inc.",
+        "Symbol": "BX",
+        "Image": "https://assets.parqet.com/logos/symbol/BX?format=png"
+    },
+    {
+        "Company": "Stryker Corporation",
+        "Symbol": "SYK",
+        "Image": "https://assets.parqet.com/logos/symbol/SYK?format=png"
+    },
+    {
+        "Company": "Micron Technology, Inc.",
+        "Symbol": "MU",
+        "Image": "https://assets.parqet.com/logos/symbol/MU?format=png"
+    },
+    {
+        "Company": "Palo Alto Networks, Inc.",
+        "Symbol": "PANW",
+        "Image": "https://assets.parqet.com/logos/symbol/PANW?format=png"
+    },
+    {
+        "Company": "Automatic Data Processing",
+        "Symbol": "ADP",
+        "Image": "https://assets.parqet.com/logos/symbol/ADP?format=png"
+    },
+    {
+        "Company": "Gilead Sciences Inc",
+        "Symbol": "GILD",
+        "Image": "https://assets.parqet.com/logos/symbol/GILD?format=png"
+    },
+    {
+        "Company": "Fiserv, Inc.",
+        "Symbol": "FI",
+        "Image": "https://assets.parqet.com/logos/symbol/FI?format=png"
+    },
+    {
+        "Company": "Lockheed Martin Corp.",
+        "Symbol": "LMT",
+        "Image": "https://assets.parqet.com/logos/symbol/LMT?format=png"
+    },
+    {
+        "Company": "T-Mobile Us, Inc.",
+        "Symbol": "TMUS",
+        "Image": "https://assets.parqet.com/logos/symbol/TMUS?format=png"
+    },
+    {
+        "Company": "Medtronic Plc",
+        "Symbol": "MDT",
+        "Image": "https://assets.parqet.com/logos/symbol/MDT?format=png"
+    },
+    {
+        "Company": "Analog Devices, Inc.",
+        "Symbol": "ADI",
+        "Image": "https://assets.parqet.com/logos/symbol/ADI?format=png"
+    },
+    {
+        "Company": "Palantir Technologies Inc. Class A",
+        "Symbol": "PLTR",
+        "Image": "https://assets.parqet.com/logos/symbol/PLTR?format=png"
+    },
+    {
+        "Company": "Intel Corp",
+        "Symbol": "INTC",
+        "Image": "https://assets.parqet.com/logos/symbol/INTC?format=png"
+    },
+    {
+        "Company": "Arista Networks",
+        "Symbol": "ANET",
+        "Image": "https://assets.parqet.com/logos/symbol/ANET?format=png"
+    },
+    {
+        "Company": "Bristol-Myers Squibb Co.",
+        "Symbol": "BMY",
+        "Image": "https://assets.parqet.com/logos/symbol/BMY?format=png"
+    },
+    {
+        "Company": "Boeing Company",
+        "Symbol": "BA",
+        "Image": "https://assets.parqet.com/logos/symbol/BA?format=png"
+    },
+    {
+        "Company": "Marsh & Mclennan Companies, Inc.",
+        "Symbol": "MMC",
+        "Image": "https://assets.parqet.com/logos/symbol/MMC?format=png"
+    },
+    {
+        "Company": "The Charles Schwab Corporation",
+        "Symbol": "SCHW",
+        "Image": "https://assets.parqet.com/logos/symbol/SCHW?format=png"
+    },
+    {
+        "Company": "Starbucks Corp",
+        "Symbol": "SBUX",
+        "Image": "https://assets.parqet.com/logos/symbol/SBUX?format=png"
+    },
+    {
+        "Company": "Prologis, Inc.",
+        "Symbol": "PLD",
+        "Image": "https://assets.parqet.com/logos/symbol/PLD?format=png"
+    },
+    {
+        "Company": "Deere & Company",
+        "Symbol": "DE",
+        "Image": "https://assets.parqet.com/logos/symbol/DE?format=png"
+    },
+    {
+        "Company": "Chubb Limited",
+        "Symbol": "CB",
+        "Image": "https://assets.parqet.com/logos/symbol/CB?format=png"
+    },
+    {
+        "Company": "Lam Research Corp",
+        "Symbol": "LRCX",
+        "Image": "https://assets.parqet.com/logos/symbol/LRCX?format=png"
+    },
+    {
+        "Company": "Kkr & Co. Inc.",
+        "Symbol": "KKR",
+        "Image": "https://assets.parqet.com/logos/symbol/KKR?format=png"
+    },
+    {
+        "Company": "Elevance Health, Inc.",
+        "Symbol": "ELV",
+        "Image": "https://assets.parqet.com/logos/symbol/ELV?format=png"
+    },
+    {
+        "Company": "United Parcel Service, Inc. Class B",
+        "Symbol": "UPS",
+        "Image": "https://assets.parqet.com/logos/symbol/UPS?format=png"
+    },
+    {
+        "Company": "The Southern Company",
+        "Symbol": "SO",
+        "Image": "https://assets.parqet.com/logos/symbol/SO?format=png"
+    },
+    {
+        "Company": "Ge Vernova Inc.",
+        "Symbol": "GEV",
+        "Image": "https://assets.parqet.com/logos/symbol/GEV?format=png"
+    },
+    {
+        "Company": "American Tower Corporation",
+        "Symbol": "AMT",
+        "Image": "https://assets.parqet.com/logos/symbol/AMT?format=png"
+    },
+    {
+        "Company": "Kla Corporation",
+        "Symbol": "KLAC",
+        "Image": "https://assets.parqet.com/logos/symbol/KLAC?format=png"
+    },
+    {
+        "Company": "Altria Group, Inc.",
+        "Symbol": "MO",
+        "Image": "https://assets.parqet.com/logos/symbol/MO?format=png"
+    },
+    {
+        "Company": "Nike, Inc.",
+        "Symbol": "NKE",
+        "Image": "https://assets.parqet.com/logos/symbol/NKE?format=png"
+    },
+    {
+        "Company": "Intercontinental Exchange Inc.",
+        "Symbol": "ICE",
+        "Image": "https://assets.parqet.com/logos/symbol/ICE?format=png"
+    },
+    {
+        "Company": "Trane Technologies Plc",
+        "Symbol": "TT",
+        "Image": "https://assets.parqet.com/logos/symbol/TT?format=png"
+    },
+    {
+        "Company": "The Cigna Group",
+        "Symbol": "CI",
+        "Image": "https://assets.parqet.com/logos/symbol/CI?format=png"
+    },
+    {
+        "Company": "The Sherwin-Williams Company",
+        "Symbol": "SHW",
+        "Image": "https://assets.parqet.com/logos/symbol/SHW?format=png"
+    },
+    {
+        "Company": "Amphenol Corporation",
+        "Symbol": "APH",
+        "Image": "https://assets.parqet.com/logos/symbol/APH?format=png"
+    },
+    {
+        "Company": "Parker-Hannifin Corporation",
+        "Symbol": "PH",
+        "Image": "https://assets.parqet.com/logos/symbol/PH?format=png"
+    },
+    {
+        "Company": "Synopsys Inc",
+        "Symbol": "SNPS",
+        "Image": "https://assets.parqet.com/logos/symbol/SNPS?format=png"
+    },
+    {
+        "Company": "Mondelez International, Inc. Class A",
+        "Symbol": "MDLZ",
+        "Image": "https://assets.parqet.com/logos/symbol/MDLZ?format=png"
+    },
+    {
+        "Company": "Regeneron Pharmaceuticals Inc",
+        "Symbol": "REGN",
+        "Image": "https://assets.parqet.com/logos/symbol/REGN?format=png"
+    },
+    {
+        "Company": "Equinix, Inc. Reit",
+        "Symbol": "EQIX",
+        "Image": "https://assets.parqet.com/logos/symbol/EQIX?format=png"
+    },
+    {
+        "Company": "Duke Energy Corporation",
+        "Symbol": "DUK",
+        "Image": "https://assets.parqet.com/logos/symbol/DUK?format=png"
+    },
+    {
+        "Company": "Paypal Holdings, Inc.",
+        "Symbol": "PYPL",
+        "Image": "https://assets.parqet.com/logos/symbol/PYPL?format=png"
+    },
+    {
+        "Company": "Cadence Design Systems",
+        "Symbol": "CDNS",
+        "Image": "https://assets.parqet.com/logos/symbol/CDNS?format=png"
+    },
+    {
+        "Company": "Aon Plc Class A",
+        "Symbol": "AON",
+        "Image": "https://assets.parqet.com/logos/symbol/AON?format=png"
+    },
+    {
+        "Company": "Pnc Financial Services Group",
+        "Symbol": "PNC",
+        "Image": "https://assets.parqet.com/logos/symbol/PNC?format=png"
+    },
+    {
+        "Company": "Waste Management, Inc.",
+        "Symbol": "WM",
+        "Image": "https://assets.parqet.com/logos/symbol/WM?format=png"
+    },
+    {
+        "Company": "Cme Group Inc.",
+        "Symbol": "CME",
+        "Image": "https://assets.parqet.com/logos/symbol/CME?format=png"
+    },
+    {
+        "Company": "Chipotle Mexican Grill, Inc.",
+        "Symbol": "CMG",
+        "Image": "https://assets.parqet.com/logos/symbol/CMG?format=png"
+    },
+    {
+        "Company": "Welltower Inc.",
+        "Symbol": "WELL",
+        "Image": "https://assets.parqet.com/logos/symbol/WELL?format=png"
+    },
+    {
+        "Company": "Zoetis Inc.",
+        "Symbol": "ZTS",
+        "Image": "https://assets.parqet.com/logos/symbol/ZTS?format=png"
+    },
+    {
+        "Company": "General Dynamics Corporation",
+        "Symbol": "GD",
+        "Image": "https://assets.parqet.com/logos/symbol/GD?format=png"
+    },
+    {
+        "Company": "Mckesson Corporation",
+        "Symbol": "MCK",
+        "Image": "https://assets.parqet.com/logos/symbol/MCK?format=png"
+    },
+    {
+        "Company": "Motorola Solutions, Inc.",
+        "Symbol": "MSI",
+        "Image": "https://assets.parqet.com/logos/symbol/MSI?format=png"
+    },
+    {
+        "Company": "U.S. Bancorp",
+        "Symbol": "USB",
+        "Image": "https://assets.parqet.com/logos/symbol/USB?format=png"
+    },
+    {
+        "Company": "Crowdstrike Holdings, Inc. Class A",
+        "Symbol": "CRWD",
+        "Image": "https://assets.parqet.com/logos/symbol/CRWD?format=png"
+    },
+    {
+        "Company": "Constellation Energy Corporation",
+        "Symbol": "CEG",
+        "Image": "https://assets.parqet.com/logos/symbol/CEG?format=png"
+    },
+    {
+        "Company": "Cintas Corp",
+        "Symbol": "CTAS",
+        "Image": "https://assets.parqet.com/logos/symbol/CTAS?format=png"
+    },
+    {
+        "Company": "Transdigm Group Incorporated",
+        "Symbol": "TDG",
+        "Image": "https://assets.parqet.com/logos/symbol/TDG?format=png"
+    },
+    {
+        "Company": "Colgate-Palmolive Company",
+        "Symbol": "CL",
+        "Image": "https://assets.parqet.com/logos/symbol/CL?format=png"
+    },
+    {
+        "Company": "Illinois Tool Works Inc.",
+        "Symbol": "ITW",
+        "Image": "https://assets.parqet.com/logos/symbol/ITW?format=png"
+    },
+    {
+        "Company": "3m Company",
+        "Symbol": "MMM",
+        "Image": "https://assets.parqet.com/logos/symbol/MMM?format=png"
+    },
+    {
+        "Company": "Moody's Corporation",
+        "Symbol": "MCO",
+        "Image": "https://assets.parqet.com/logos/symbol/MCO?format=png"
+    },
+    {
+        "Company": "Emerson Electric Co.",
+        "Symbol": "EMR",
+        "Image": "https://assets.parqet.com/logos/symbol/EMR?format=png"
+    },
+    {
+        "Company": "Eog Resources, Inc.",
+        "Symbol": "EOG",
+        "Image": "https://assets.parqet.com/logos/symbol/EOG?format=png"
+    },
+    {
+        "Company": "Cvs Health Corporation",
+        "Symbol": "CVS",
+        "Image": "https://assets.parqet.com/logos/symbol/CVS?format=png"
+    },
+    {
+        "Company": "Northrop Grumman Corp.",
+        "Symbol": "NOC",
+        "Image": "https://assets.parqet.com/logos/symbol/NOC?format=png"
+    },
+    {
+        "Company": "Capital One Financial",
+        "Symbol": "COF",
+        "Image": "https://assets.parqet.com/logos/symbol/COF?format=png"
+    },
+    {
+        "Company": "O'reilly Automotive, Inc.",
+        "Symbol": "ORLY",
+        "Image": "https://assets.parqet.com/logos/symbol/ORLY?format=png"
+    },
+    {
+        "Company": "Target Corporation",
+        "Symbol": "TGT",
+        "Image": "https://assets.parqet.com/logos/symbol/TGT?format=png"
+    },
+    {
+        "Company": "Freeport-Mcmoran Inc.",
+        "Symbol": "FCX",
+        "Image": "https://assets.parqet.com/logos/symbol/FCX?format=png"
+    },
+    {
+        "Company": "Air Products & Chemicals, Inc.",
+        "Symbol": "APD",
+        "Image": "https://assets.parqet.com/logos/symbol/APD?format=png"
+    },
+    {
+        "Company": "Csx Corporation",
+        "Symbol": "CSX",
+        "Image": "https://assets.parqet.com/logos/symbol/CSX?format=png"
+    },
+    {
+        "Company": "Williams Companies Inc.",
+        "Symbol": "WMB",
+        "Image": "https://assets.parqet.com/logos/symbol/WMB?format=png"
+    },
+    {
+        "Company": "Hca Healthcare, Inc.",
+        "Symbol": "HCA",
+        "Image": "https://assets.parqet.com/logos/symbol/HCA?format=png"
+    },
+    {
+        "Company": "Autodesk Inc",
+        "Symbol": "ADSK",
+        "Image": "https://assets.parqet.com/logos/symbol/ADSK?format=png"
+    },
+    {
+        "Company": "Becton, Dickinson and Co.",
+        "Symbol": "BDX",
+        "Image": "https://assets.parqet.com/logos/symbol/BDX?format=png"
+    },
+    {
+        "Company": "Marriot International Class A",
+        "Symbol": "MAR",
+        "Image": "https://assets.parqet.com/logos/symbol/MAR?format=png"
+    },
+    {
+        "Company": "Airbnb, Inc. Class A",
+        "Symbol": "ABNB",
+        "Image": "https://assets.parqet.com/logos/symbol/ABNB?format=png"
+    },
+    {
+        "Company": "Fedex Corporation",
+        "Symbol": "FDX",
+        "Image": "https://assets.parqet.com/logos/symbol/FDX?format=png"
+    },
+    {
+        "Company": "Arthur J. Gallagher & Co.",
+        "Symbol": "AJG",
+        "Image": "https://assets.parqet.com/logos/symbol/AJG?format=png"
+    },
+    {
+        "Company": "Carrier Global Corporation",
+        "Symbol": "CARR",
+        "Image": "https://assets.parqet.com/logos/symbol/CARR?format=png"
+    },
+    {
+        "Company": "Ecolab, Inc.",
+        "Symbol": "ECL",
+        "Image": "https://assets.parqet.com/logos/symbol/ECL?format=png"
+    },
+    {
+        "Company": "General Motors Company",
+        "Symbol": "GM",
+        "Image": "https://assets.parqet.com/logos/symbol/GM?format=png"
+    },
+    {
+        "Company": "Schlumberger Limited",
+        "Symbol": "SLB",
+        "Image": "https://assets.parqet.com/logos/symbol/SLB?format=png"
+    },
+    {
+        "Company": "Roper Technologies, Inc.",
+        "Symbol": "ROP",
+        "Image": "https://assets.parqet.com/logos/symbol/ROP?format=png"
+    },
+    {
+        "Company": "Norfolk Southern Corp.",
+        "Symbol": "NSC",
+        "Image": "https://assets.parqet.com/logos/symbol/NSC?format=png"
+    },
+    {
+        "Company": "Truist Financial Corporation",
+        "Symbol": "TFC",
+        "Image": "https://assets.parqet.com/logos/symbol/TFC?format=png"
+    },
+    {
+        "Company": "Oneok, Inc.",
+        "Symbol": "OKE",
+        "Image": "https://assets.parqet.com/logos/symbol/OKE?format=png"
+    },
+    {
+        "Company": "Hilton Worldwide Holdings Inc.",
+        "Symbol": "HLT",
+        "Image": "https://assets.parqet.com/logos/symbol/HLT?format=png"
+    },
+    {
+        "Company": "Nxp Semiconductors N.v.",
+        "Symbol": "NXPI",
+        "Image": "https://assets.parqet.com/logos/symbol/NXPI?format=png"
+    },
+    {
+        "Company": "Paccar Inc",
+        "Symbol": "PCAR",
+        "Image": "https://assets.parqet.com/logos/symbol/PCAR?format=png"
+    },
+    {
+        "Company": "The Travelers Companies, Inc.",
+        "Symbol": "TRV",
+        "Image": "https://assets.parqet.com/logos/symbol/TRV?format=png"
+    },
+    {
+        "Company": "United Rentals, Inc.",
+        "Symbol": "URI",
+        "Image": "https://assets.parqet.com/logos/symbol/URI?format=png"
+    },
+    {
+        "Company": "Bank of New York Mellon Corporation",
+        "Symbol": "BK",
+        "Image": "https://assets.parqet.com/logos/symbol/BK?format=png"
+    },
+    {
+        "Company": "Sempra",
+        "Symbol": "SRE",
+        "Image": "https://assets.parqet.com/logos/symbol/SRE?format=png"
+    },
+    {
+        "Company": "Digital Realty Trust, Inc.",
+        "Symbol": "DLR",
+        "Image": "https://assets.parqet.com/logos/symbol/DLR?format=png"
+    },
+    {
+        "Company": "Johnson Controls International Plc",
+        "Symbol": "JCI",
+        "Image": "https://assets.parqet.com/logos/symbol/JCI?format=png"
+    },
+    {
+        "Company": "Aflac Inc.",
+        "Symbol": "AFL",
+        "Image": "https://assets.parqet.com/logos/symbol/AFL?format=png"
+    },
+    {
+        "Company": "Simon Property Group, Inc.",
+        "Symbol": "SPG",
+        "Image": "https://assets.parqet.com/logos/symbol/SPG?format=png"
+    },
+    {
+        "Company": "Autozone, Inc.",
+        "Symbol": "AZO",
+        "Image": "https://assets.parqet.com/logos/symbol/AZO?format=png"
+    },
+    {
+        "Company": "Ameriprise Financial, Inc.",
+        "Symbol": "AMP",
+        "Image": "https://assets.parqet.com/logos/symbol/AMP?format=png"
+    },
+    {
+        "Company": "Fair Isaac Corporation",
+        "Symbol": "FICO",
+        "Image": "https://assets.parqet.com/logos/symbol/FICO?format=png"
+    },
+    {
+        "Company": "Fortinet, Inc.",
+        "Symbol": "FTNT",
+        "Image": "https://assets.parqet.com/logos/symbol/FTNT?format=png"
+    },
+    {
+        "Company": "Phillips 66",
+        "Symbol": "PSX",
+        "Image": "https://assets.parqet.com/logos/symbol/PSX?format=png"
+    },
+    {
+        "Company": "W.W. Grainger, Inc.",
+        "Symbol": "GWW",
+        "Image": "https://assets.parqet.com/logos/symbol/GWW?format=png"
+    },
+    {
+        "Company": "Public Storage",
+        "Symbol": "PSA",
+        "Image": "https://assets.parqet.com/logos/symbol/PSA?format=png"
+    },
+    {
+        "Company": "Royal Caribbean Group",
+        "Symbol": "RCL",
+        "Image": "https://assets.parqet.com/logos/symbol/RCL?format=png"
+    },
+    {
+        "Company": "Newmont Corporation",
+        "Symbol": "NEM",
+        "Image": "https://assets.parqet.com/logos/symbol/NEM?format=png"
+    },
+    {
+        "Company": "Marathon Petroleum Corporation",
+        "Symbol": "MPC",
+        "Image": "https://assets.parqet.com/logos/symbol/MPC?format=png"
+    },
+    {
+        "Company": "Kinder Morgan, Inc.",
+        "Symbol": "KMI",
+        "Image": "https://assets.parqet.com/logos/symbol/KMI?format=png"
+    },
+    {
+        "Company": "American Electric Power Company, Inc.",
+        "Symbol": "AEP",
+        "Image": "https://assets.parqet.com/logos/symbol/AEP?format=png"
+    },
+    {
+        "Company": "The Allstate Corporation",
+        "Symbol": "ALL",
+        "Image": "https://assets.parqet.com/logos/symbol/ALL?format=png"
+    },
+    {
+        "Company": "D.R. Horton Inc.",
+        "Symbol": "DHI",
+        "Image": "https://assets.parqet.com/logos/symbol/DHI?format=png"
+    },
+    {
+        "Company": "American International Group, Inc.",
+        "Symbol": "AIG",
+        "Image": "https://assets.parqet.com/logos/symbol/AIG?format=png"
+    },
+    {
+        "Company": "Realty Income Corporation",
+        "Symbol": "O",
+        "Image": "https://assets.parqet.com/logos/symbol/O?format=png"
+    },
+    {
+        "Company": "Copart Inc",
+        "Symbol": "CPRT",
+        "Image": "https://assets.parqet.com/logos/symbol/CPRT?format=png"
+    },
+    {
+        "Company": "Cummins Inc.",
+        "Symbol": "CMI",
+        "Image": "https://assets.parqet.com/logos/symbol/CMI?format=png"
+    },
+    {
+        "Company": "L3harris Technologies, Inc.",
+        "Symbol": "LHX",
+        "Image": "https://assets.parqet.com/logos/symbol/LHX?format=png"
+    },
+    {
+        "Company": "Metlife, Inc.",
+        "Symbol": "MET",
+        "Image": "https://assets.parqet.com/logos/symbol/MET?format=png"
+    },
+    {
+        "Company": "Fastenal Co",
+        "Symbol": "FAST",
+        "Image": "https://assets.parqet.com/logos/symbol/FAST?format=png"
+    },
+    {
+        "Company": "Dominion Energy, Inc.",
+        "Symbol": "D",
+        "Image": "https://assets.parqet.com/logos/symbol/D?format=png"
+    },
+    {
+        "Company": "Ross Stores Inc",
+        "Symbol": "ROST",
+        "Image": "https://assets.parqet.com/logos/symbol/ROST?format=png"
+    },
+    {
+        "Company": "Fidelity National Information Services, Inc.",
+        "Symbol": "FIS",
+        "Image": "https://assets.parqet.com/logos/symbol/FIS?format=png"
+    },
+    {
+        "Company": "Quanta Services, Inc.",
+        "Symbol": "PWR",
+        "Image": "https://assets.parqet.com/logos/symbol/PWR?format=png"
+    },
+    {
+        "Company": "Te Connectivity Ltd",
+        "Symbol": "TEL",
+        "Image": "https://assets.parqet.com/logos/symbol/TEL?format=png"
+    },
+    {
+        "Company": "Paychex Inc",
+        "Symbol": "PAYX",
+        "Image": "https://assets.parqet.com/logos/symbol/PAYX?format=png"
+    },
+    {
+        "Company": "Vistra Corp.",
+        "Symbol": "VST",
+        "Image": "https://assets.parqet.com/logos/symbol/VST?format=png"
+    },
+    {
+        "Company": "Howmet Aerospace Inc.",
+        "Symbol": "HWM",
+        "Image": "https://assets.parqet.com/logos/symbol/HWM?format=png"
+    },
+    {
+        "Company": "Crown Castle Inc.",
+        "Symbol": "CCI",
+        "Image": "https://assets.parqet.com/logos/symbol/CCI?format=png"
+    },
+    {
+        "Company": "Msci, Inc.",
+        "Symbol": "MSCI",
+        "Image": "https://assets.parqet.com/logos/symbol/MSCI?format=png"
+    },
+    {
+        "Company": "Kimberly-Clark Corp.",
+        "Symbol": "KMB",
+        "Image": "https://assets.parqet.com/logos/symbol/KMB?format=png"
+    },
+    {
+        "Company": "Prudential Financial, Inc.",
+        "Symbol": "PRU",
+        "Image": "https://assets.parqet.com/logos/symbol/PRU?format=png"
+    },
+    {
+        "Company": "Kenvue Inc.",
+        "Symbol": "KVUE",
+        "Image": "https://assets.parqet.com/logos/symbol/KVUE?format=png"
+    },
+    {
+        "Company": "Discover Financial Services",
+        "Symbol": "DFS",
+        "Image": "https://assets.parqet.com/logos/symbol/DFS?format=png"
+    },
+    {
+        "Company": "Ametek, Inc.",
+        "Symbol": "AME",
+        "Image": "https://assets.parqet.com/logos/symbol/AME?format=png"
+    },
+    {
+        "Company": "Valero Energy Corporation",
+        "Symbol": "VLO",
+        "Image": "https://assets.parqet.com/logos/symbol/VLO?format=png"
+    },
+    {
+        "Company": "Pg&e Corporation",
+        "Symbol": "PCG",
+        "Image": "https://assets.parqet.com/logos/symbol/PCG?format=png"
+    },
+    {
+        "Company": "Cencora, Inc.",
+        "Symbol": "COR",
+        "Image": "https://assets.parqet.com/logos/symbol/COR?format=png"
+    },
+    {
+        "Company": "Baker Hughes Company",
+        "Symbol": "BKR",
+        "Image": "https://assets.parqet.com/logos/symbol/BKR?format=png"
+    },
+    {
+        "Company": "Ford Motor Company",
+        "Symbol": "F",
+        "Image": "https://assets.parqet.com/logos/symbol/F?format=png"
+    },
+    {
+        "Company": "Republic Services Inc.",
+        "Symbol": "RSG",
+        "Image": "https://assets.parqet.com/logos/symbol/RSG?format=png"
+    },
+    {
+        "Company": "Old Dominion Freight Line",
+        "Symbol": "ODFL",
+        "Image": "https://assets.parqet.com/logos/symbol/ODFL?format=png"
+    },
+    {
+        "Company": "Public Service Enterprise Group Incorporated",
+        "Symbol": "PEG",
+        "Image": "https://assets.parqet.com/logos/symbol/PEG?format=png"
+    },
+    {
+        "Company": "Ingersoll Rand Inc.",
+        "Symbol": "IR",
+        "Image": "https://assets.parqet.com/logos/symbol/IR?format=png"
+    },
+    {
+        "Company": "Gartner, Inc.",
+        "Symbol": "IT",
+        "Image": "https://assets.parqet.com/logos/symbol/IT?format=png"
+    },
+    {
+        "Company": "Lennar Corporation Class A",
+        "Symbol": "LEN",
+        "Image": "https://assets.parqet.com/logos/symbol/LEN?format=png"
+    },
+    {
+        "Company": "Targa Resources Corp.",
+        "Symbol": "TRGP",
+        "Image": "https://assets.parqet.com/logos/symbol/TRGP?format=png"
+    },
+    {
+        "Company": "Agilent Technologies Inc.",
+        "Symbol": "A",
+        "Image": "https://assets.parqet.com/logos/symbol/A?format=png"
+    },
+    {
+        "Company": "Corteva, Inc.",
+        "Symbol": "CTVA",
+        "Image": "https://assets.parqet.com/logos/symbol/CTVA?format=png"
+    },
+    {
+        "Company": "Otis Worldwide Corporation",
+        "Symbol": "OTIS",
+        "Image": "https://assets.parqet.com/logos/symbol/OTIS?format=png"
+    },
+    {
+        "Company": "Ge Healthcare Technologies Inc.",
+        "Symbol": "GEHC",
+        "Image": "https://assets.parqet.com/logos/symbol/GEHC?format=png"
+    },
+    {
+        "Company": "Cognizant Technology Solutions",
+        "Symbol": "CTSH",
+        "Image": "https://assets.parqet.com/logos/symbol/CTSH?format=png"
+    },
+    {
+        "Company": "Verisk Analytics, Inc.",
+        "Symbol": "VRSK",
+        "Image": "https://assets.parqet.com/logos/symbol/VRSK?format=png"
+    },
+    {
+        "Company": "Microchip Technology Inc",
+        "Symbol": "MCHP",
+        "Image": "https://assets.parqet.com/logos/symbol/MCHP?format=png"
+    },
+    {
+        "Company": "Cbre Group, Inc.",
+        "Symbol": "CBRE",
+        "Image": "https://assets.parqet.com/logos/symbol/CBRE?format=png"
+    },
+    {
+        "Company": "Dell Technologies Inc.",
+        "Symbol": "DELL",
+        "Image": "https://assets.parqet.com/logos/symbol/DELL?format=png"
+    },
+    {
+        "Company": "Edwards Lifesciences Corp",
+        "Symbol": "EW",
+        "Image": "https://assets.parqet.com/logos/symbol/EW?format=png"
+    },
+    {
+        "Company": "Hess Corporation",
+        "Symbol": "HES",
+        "Image": "https://assets.parqet.com/logos/symbol/HES?format=png"
+    },
+    {
+        "Company": "The Kroger Co.",
+        "Symbol": "KR",
+        "Image": "https://assets.parqet.com/logos/symbol/KR?format=png"
+    },
+    {
+        "Company": "Delta Air Lines, Inc.",
+        "Symbol": "DAL",
+        "Image": "https://assets.parqet.com/logos/symbol/DAL?format=png"
+    },
+    {
+        "Company": "Monster Beverage Corporation",
+        "Symbol": "MNST",
+        "Image": "https://assets.parqet.com/logos/symbol/MNST?format=png"
+    },
+    {
+        "Company": "Yum! Brands, Inc.",
+        "Symbol": "YUM",
+        "Image": "https://assets.parqet.com/logos/symbol/YUM?format=png"
+    },
+    {
+        "Company": "Electronic Arts Inc",
+        "Symbol": "EA",
+        "Image": "https://assets.parqet.com/logos/symbol/EA?format=png"
+    },
+    {
+        "Company": "Vulcan Materials Company",
+        "Symbol": "VMC",
+        "Image": "https://assets.parqet.com/logos/symbol/VMC?format=png"
+    },
+    {
+        "Company": "Nucor Corporation",
+        "Symbol": "NUE",
+        "Image": "https://assets.parqet.com/logos/symbol/NUE?format=png"
+    },
+    {
+        "Company": "Charter Comm Inc Del Cl a",
+        "Symbol": "CHTR",
+        "Image": "https://assets.parqet.com/logos/symbol/CHTR?format=png"
+    },
+    {
+        "Company": "Monolithic Power Systems, Inc.",
+        "Symbol": "MPWR",
+        "Image": "https://assets.parqet.com/logos/symbol/MPWR?format=png"
+    },
+    {
+        "Company": "Sysco Corporation",
+        "Symbol": "SYY",
+        "Image": "https://assets.parqet.com/logos/symbol/SYY?format=png"
+    },
+    {
+        "Company": "Martin Marietta Materials",
+        "Symbol": "MLM",
+        "Image": "https://assets.parqet.com/logos/symbol/MLM?format=png"
+    },
+    {
+        "Company": "Exelon Corporation",
+        "Symbol": "EXC",
+        "Image": "https://assets.parqet.com/logos/symbol/EXC?format=png"
+    },
+    {
+        "Company": "Iqvia Holdings Inc.",
+        "Symbol": "IQV",
+        "Image": "https://assets.parqet.com/logos/symbol/IQV?format=png"
+    },
+    {
+        "Company": "Arch Capital Group Ltd",
+        "Symbol": "ACGL",
+        "Image": "https://assets.parqet.com/logos/symbol/ACGL?format=png"
+    },
+    {
+        "Company": "Corning Incorporated",
+        "Symbol": "GLW",
+        "Image": "https://assets.parqet.com/logos/symbol/GLW?format=png"
+    },
+    {
+        "Company": "Keurig Dr Pepper Inc.",
+        "Symbol": "KDP",
+        "Image": "https://assets.parqet.com/logos/symbol/KDP?format=png"
+    },
+    {
+        "Company": "Xcel Energy, Inc.",
+        "Symbol": "XEL",
+        "Image": "https://assets.parqet.com/logos/symbol/XEL?format=png"
+    },
+    {
+        "Company": "Constellation Brands, Inc.",
+        "Symbol": "STZ",
+        "Image": "https://assets.parqet.com/logos/symbol/STZ?format=png"
+    },
+    {
+        "Company": "Hp Inc.",
+        "Symbol": "HPQ",
+        "Image": "https://assets.parqet.com/logos/symbol/HPQ?format=png"
+    },
+    {
+        "Company": "Resmed Inc.",
+        "Symbol": "RMD",
+        "Image": "https://assets.parqet.com/logos/symbol/RMD?format=png"
+    },
+    {
+        "Company": "Lululemon Athletica Inc.",
+        "Symbol": "LULU",
+        "Image": "https://assets.parqet.com/logos/symbol/LULU?format=png"
+    },
+    {
+        "Company": "Dupont De Nemours, Inc.",
+        "Symbol": "DD",
+        "Image": "https://assets.parqet.com/logos/symbol/DD?format=png"
+    },
+    {
+        "Company": "General Mills, Inc.",
+        "Symbol": "GIS",
+        "Image": "https://assets.parqet.com/logos/symbol/GIS?format=png"
+    },
+    {
+        "Company": "Idexx Laboratories Inc",
+        "Symbol": "IDXX",
+        "Image": "https://assets.parqet.com/logos/symbol/IDXX?format=png"
+    },
+    {
+        "Company": "Wabtec Inc.",
+        "Symbol": "WAB",
+        "Image": "https://assets.parqet.com/logos/symbol/WAB?format=png"
+    },
+    {
+        "Company": "Extra Space Storage, Inc.",
+        "Symbol": "EXR",
+        "Image": "https://assets.parqet.com/logos/symbol/EXR?format=png"
+    },
+    {
+        "Company": "M&t Bank Corp.",
+        "Symbol": "MTB",
+        "Image": "https://assets.parqet.com/logos/symbol/MTB?format=png"
+    },
+    {
+        "Company": "Humana Inc.",
+        "Symbol": "HUM",
+        "Image": "https://assets.parqet.com/logos/symbol/HUM?format=png"
+    },
+    {
+        "Company": "Occidental Petroleum Corporation",
+        "Symbol": "OXY",
+        "Image": "https://assets.parqet.com/logos/symbol/OXY?format=png"
+    },
+    {
+        "Company": "Iron Mountain Inc.",
+        "Symbol": "IRM",
+        "Image": "https://assets.parqet.com/logos/symbol/IRM?format=png"
+    },
+    {
+        "Company": "Dow Inc.",
+        "Symbol": "DOW",
+        "Image": "https://assets.parqet.com/logos/symbol/DOW?format=png"
+    },
+    {
+        "Company": "Diamondback Energy, Inc.",
+        "Symbol": "FANG",
+        "Image": "https://assets.parqet.com/logos/symbol/FANG?format=png"
+    },
+    {
+        "Company": "The Hartford Financial Services Group, Inc.",
+        "Symbol": "HIG",
+        "Image": "https://assets.parqet.com/logos/symbol/HIG?format=png"
+    },
+    {
+        "Company": "Consolidated Edison, Inc.",
+        "Symbol": "ED",
+        "Image": "https://assets.parqet.com/logos/symbol/ED?format=png"
+    },
+    {
+        "Company": "Axon Enterprise, Inc.",
+        "Symbol": "AXON",
+        "Image": "https://assets.parqet.com/logos/symbol/AXON?format=png"
+    },
+    {
+        "Company": "Equifax, Incorporated",
+        "Symbol": "EFX",
+        "Image": "https://assets.parqet.com/logos/symbol/EFX?format=png"
+    },
+    {
+        "Company": "Centene Corporation",
+        "Symbol": "CNC",
+        "Image": "https://assets.parqet.com/logos/symbol/CNC?format=png"
+    },
+    {
+        "Company": "Avalonbay Communities, Inc.",
+        "Symbol": "AVB",
+        "Image": "https://assets.parqet.com/logos/symbol/AVB?format=png"
+    },
+    {
+        "Company": "Vici Properties Inc.",
+        "Symbol": "VICI",
+        "Image": "https://assets.parqet.com/logos/symbol/VICI?format=png"
+    },
+    {
+        "Company": "Nasdaq, Inc.",
+        "Symbol": "NDAQ",
+        "Image": "https://assets.parqet.com/logos/symbol/NDAQ?format=png"
+    },
+    {
+        "Company": "Garmin Ltd",
+        "Symbol": "GRMN",
+        "Image": "https://assets.parqet.com/logos/symbol/GRMN?format=png"
+    },
+    {
+        "Company": "Willis Towers Watson Public Limited Companys",
+        "Symbol": "WTW",
+        "Image": "https://assets.parqet.com/logos/symbol/WTW?format=png"
+    },
+    {
+        "Company": "Edison International",
+        "Symbol": "EIX",
+        "Image": "https://assets.parqet.com/logos/symbol/EIX?format=png"
+    },
+    {
+        "Company": "Rockwell Automation, Inc.",
+        "Symbol": "ROK",
+        "Image": "https://assets.parqet.com/logos/symbol/ROK?format=png"
+    },
+    {
+        "Company": "Costar Group Inc",
+        "Symbol": "CSGP",
+        "Image": "https://assets.parqet.com/logos/symbol/CSGP?format=png"
+    },
+    {
+        "Company": "Tractor Supply Co",
+        "Symbol": "TSCO",
+        "Image": "https://assets.parqet.com/logos/symbol/TSCO?format=png"
+    },
+    {
+        "Company": "Entergy Corporation",
+        "Symbol": "ETR",
+        "Image": "https://assets.parqet.com/logos/symbol/ETR?format=png"
+    },
+    {
+        "Company": "Fifth Third Bancorp",
+        "Symbol": "FITB",
+        "Image": "https://assets.parqet.com/logos/symbol/FITB?format=png"
+    },
+    {
+        "Company": "Ansys Inc",
+        "Symbol": "ANSS",
+        "Image": "https://assets.parqet.com/logos/symbol/ANSS?format=png"
+    },
+    {
+        "Company": "On Semiconductor Corp",
+        "Symbol": "ON",
+        "Image": "https://assets.parqet.com/logos/symbol/ON?format=png"
+    },
+    {
+        "Company": "Ebay Inc",
+        "Symbol": "EBAY",
+        "Image": "https://assets.parqet.com/logos/symbol/EBAY?format=png"
+    },
+    {
+        "Company": "Wec Energy Group, Inc.",
+        "Symbol": "WEC",
+        "Image": "https://assets.parqet.com/logos/symbol/WEC?format=png"
+    },
+    {
+        "Company": "Xylem Inc",
+        "Symbol": "XYL",
+        "Image": "https://assets.parqet.com/logos/symbol/XYL?format=png"
+    },
+    {
+        "Company": "Mettler-Toledo International",
+        "Symbol": "MTD",
+        "Image": "https://assets.parqet.com/logos/symbol/MTD?format=png"
+    },
+    {
+        "Company": "Ppg Industries, Inc.",
+        "Symbol": "PPG",
+        "Image": "https://assets.parqet.com/logos/symbol/PPG?format=png"
+    },
+    {
+        "Company": "Take-Two Interactive Software Inc",
+        "Symbol": "TTWO",
+        "Image": "https://assets.parqet.com/logos/symbol/TTWO?format=png"
+    },
+    {
+        "Company": "Raymond James Financial, Inc.",
+        "Symbol": "RJF",
+        "Image": "https://assets.parqet.com/logos/symbol/RJF?format=png"
+    },
+    {
+        "Company": "The Kraft Heinz Company",
+        "Symbol": "KHC",
+        "Image": "https://assets.parqet.com/logos/symbol/KHC?format=png"
+    },
+    {
+        "Company": "Keysight Technologies, Inc.",
+        "Symbol": "KEYS",
+        "Image": "https://assets.parqet.com/logos/symbol/KEYS?format=png"
+    },
+    {
+        "Company": "Cardinal Health, Inc.",
+        "Symbol": "CAH",
+        "Image": "https://assets.parqet.com/logos/symbol/CAH?format=png"
+    },
+    {
+        "Company": "Global Payments, Inc.",
+        "Symbol": "GPN",
+        "Image": "https://assets.parqet.com/logos/symbol/GPN?format=png"
+    },
+    {
+        "Company": "State Street Corporation",
+        "Symbol": "STT",
+        "Image": "https://assets.parqet.com/logos/symbol/STT?format=png"
+    },
+    {
+        "Company": "Nvr, Inc.",
+        "Symbol": "NVR",
+        "Image": "https://assets.parqet.com/logos/symbol/NVR?format=png"
+    },
+    {
+        "Company": "United Airlines Holdings, Inc.",
+        "Symbol": "UAL",
+        "Image": "https://assets.parqet.com/logos/symbol/UAL?format=png"
+    },
+    {
+        "Company": "Hewlett Packard Enterprise Company",
+        "Symbol": "HPE",
+        "Image": "https://assets.parqet.com/logos/symbol/HPE?format=png"
+    },
+    {
+        "Company": "Dover Corporation",
+        "Symbol": "DOV",
+        "Image": "https://assets.parqet.com/logos/symbol/DOV?format=png"
+    },
+    {
+        "Company": "Dexcom, Inc.",
+        "Symbol": "DXCM",
+        "Image": "https://assets.parqet.com/logos/symbol/DXCM?format=png"
+    },
+    {
+        "Company": "Pultegroup, Inc.",
+        "Symbol": "PHM",
+        "Image": "https://assets.parqet.com/logos/symbol/PHM?format=png"
+    },
+    {
+        "Company": "Cdw Corporation",
+        "Symbol": "CDW",
+        "Image": "https://assets.parqet.com/logos/symbol/CDW?format=png"
+    },
+    {
+        "Company": "T Rowe Price Group Inc",
+        "Symbol": "TROW",
+        "Image": "https://assets.parqet.com/logos/symbol/TROW?format=png"
+    },
+    {
+        "Company": "Ventas, Inc.",
+        "Symbol": "VTR",
+        "Image": "https://assets.parqet.com/logos/symbol/VTR?format=png"
+    },
+    {
+        "Company": "Smurfit Westrock Plc",
+        "Symbol": "SW",
+        "Image": "https://assets.parqet.com/logos/symbol/SW?format=png"
+    },
+    {
+        "Company": "Tyler Technologies, Inc.",
+        "Symbol": "TYL",
+        "Image": "https://assets.parqet.com/logos/symbol/TYL?format=png"
+    },
+    {
+        "Company": "Brown & Brown, Inc.",
+        "Symbol": "BRO",
+        "Image": "https://assets.parqet.com/logos/symbol/BRO?format=png"
+    },
+    {
+        "Company": "Deckers Outdoor Corp",
+        "Symbol": "DECK",
+        "Image": "https://assets.parqet.com/logos/symbol/DECK?format=png"
+    },
+    {
+        "Company": "Halliburton Company",
+        "Symbol": "HAL",
+        "Image": "https://assets.parqet.com/logos/symbol/HAL?format=png"
+    },
+    {
+        "Company": "Leidos Holdings, Inc.",
+        "Symbol": "LDOS",
+        "Image": "https://assets.parqet.com/logos/symbol/LDOS?format=png"
+    },
+    {
+        "Company": "Fortive Corporation",
+        "Symbol": "FTV",
+        "Image": "https://assets.parqet.com/logos/symbol/FTV?format=png"
+    },
+    {
+        "Company": "American Water Works Company, Inc",
+        "Symbol": "AWK",
+        "Image": "https://assets.parqet.com/logos/symbol/AWK?format=png"
+    },
+    {
+        "Company": "Broadridge Financial Solutions Inc",
+        "Symbol": "BR",
+        "Image": "https://assets.parqet.com/logos/symbol/BR?format=png"
+    },
+    {
+        "Company": "Veralto Corporation",
+        "Symbol": "VLTO",
+        "Image": "https://assets.parqet.com/logos/symbol/VLTO?format=png"
+    },
+    {
+        "Company": "Synchrony Financial",
+        "Symbol": "SYF",
+        "Image": "https://assets.parqet.com/logos/symbol/SYF?format=png"
+    },
+    {
+        "Company": "The Hershey Company",
+        "Symbol": "HSY",
+        "Image": "https://assets.parqet.com/logos/symbol/HSY?format=png"
+    },
+    {
+        "Company": "Church & Dwight Co., Inc.",
+        "Symbol": "CHD",
+        "Image": "https://assets.parqet.com/logos/symbol/CHD?format=png"
+    },
+    {
+        "Company": "Biogen Inc.",
+        "Symbol": "BIIB",
+        "Image": "https://assets.parqet.com/logos/symbol/BIIB?format=png"
+    },
+    {
+        "Company": "Netapp, Inc",
+        "Symbol": "NTAP",
+        "Image": "https://assets.parqet.com/logos/symbol/NTAP?format=png"
+    },
+    {
+        "Company": "Huntington Bancshares Inc",
+        "Symbol": "HBAN",
+        "Image": "https://assets.parqet.com/logos/symbol/HBAN?format=png"
+    },
+    {
+        "Company": "Archer Daniels Midland Company",
+        "Symbol": "ADM",
+        "Image": "https://assets.parqet.com/logos/symbol/ADM?format=png"
+    },
+    {
+        "Company": "Hubbell Incorporated",
+        "Symbol": "HUBB",
+        "Image": "https://assets.parqet.com/logos/symbol/HUBB?format=png"
+    },
+    {
+        "Company": "Godaddy Inc",
+        "Symbol": "GDDY",
+        "Image": "https://assets.parqet.com/logos/symbol/GDDY?format=png"
+    },
+    {
+        "Company": "Equity Residential",
+        "Symbol": "EQR",
+        "Image": "https://assets.parqet.com/logos/symbol/EQR?format=png"
+    },
+    {
+        "Company": "Devon Energy Corporation",
+        "Symbol": "DVN",
+        "Image": "https://assets.parqet.com/logos/symbol/DVN?format=png"
+    },
+    {
+        "Company": "Dte Energy Company",
+        "Symbol": "DTE",
+        "Image": "https://assets.parqet.com/logos/symbol/DTE?format=png"
+    },
+    {
+        "Company": "Eqt Corp",
+        "Symbol": "EQT",
+        "Image": "https://assets.parqet.com/logos/symbol/EQT?format=png"
+    },
+    {
+        "Company": "Corpay, Inc.",
+        "Symbol": "CPAY",
+        "Image": "https://assets.parqet.com/logos/symbol/CPAY?format=png"
+    },
+    {
+        "Company": "Carnival Corporation",
+        "Symbol": "CCL",
+        "Image": "https://assets.parqet.com/logos/symbol/CCL?format=png"
+    },
+    {
+        "Company": "Ppl Corporation",
+        "Symbol": "PPL",
+        "Image": "https://assets.parqet.com/logos/symbol/PPL?format=png"
+    },
+    {
+        "Company": "Sba Communications Corp",
+        "Symbol": "SBAC",
+        "Image": "https://assets.parqet.com/logos/symbol/SBAC?format=png"
+    },
+    {
+        "Company": "West Pharmaceutical Services, Inc.",
+        "Symbol": "WST",
+        "Image": "https://assets.parqet.com/logos/symbol/WST?format=png"
+    },
+    {
+        "Company": "International Flavors & Fragrances Inc.",
+        "Symbol": "IFF",
+        "Image": "https://assets.parqet.com/logos/symbol/IFF?format=png"
+    },
+    {
+        "Company": "Regions Financial Corp.",
+        "Symbol": "RF",
+        "Image": "https://assets.parqet.com/logos/symbol/RF?format=png"
+    },
+    {
+        "Company": "Ameren Corporation",
+        "Symbol": "AEE",
+        "Image": "https://assets.parqet.com/logos/symbol/AEE?format=png"
+    },
+    {
+        "Company": "Weyerhaeuser Company",
+        "Symbol": "WY",
+        "Image": "https://assets.parqet.com/logos/symbol/WY?format=png"
+    },
+    {
+        "Company": "Western Digital Corp.",
+        "Symbol": "WDC",
+        "Image": "https://assets.parqet.com/logos/symbol/WDC?format=png"
+    },
+    {
+        "Company": "Cincinnati Financial Corp",
+        "Symbol": "CINF",
+        "Image": "https://assets.parqet.com/logos/symbol/CINF?format=png"
+    },
+    {
+        "Company": "Waters Corp",
+        "Symbol": "WAT",
+        "Image": "https://assets.parqet.com/logos/symbol/WAT?format=png"
+    },
+    {
+        "Company": "Ptc, Inc",
+        "Symbol": "PTC",
+        "Image": "https://assets.parqet.com/logos/symbol/PTC?format=png"
+    },
+    {
+        "Company": "Lyondellbasell Industries N.v. Class A",
+        "Symbol": "LYB",
+        "Image": "https://assets.parqet.com/logos/symbol/LYB?format=png"
+    },
+    {
+        "Company": "Teledyne Technologies Incorporated",
+        "Symbol": "TDY",
+        "Image": "https://assets.parqet.com/logos/symbol/TDY?format=png"
+    },
+    {
+        "Company": "Zimmer Biomet Holdings, Inc.",
+        "Symbol": "ZBH",
+        "Image": "https://assets.parqet.com/logos/symbol/ZBH?format=png"
+    },
+    {
+        "Company": "Seagate Technology Holdings Plcs",
+        "Symbol": "STX",
+        "Image": "https://assets.parqet.com/logos/symbol/STX?format=png"
+    },
+    {
+        "Company": "Atmos Energy Corporation",
+        "Symbol": "ATO",
+        "Image": "https://assets.parqet.com/logos/symbol/ATO?format=png"
+    },
+    {
+        "Company": "Eversource Energy",
+        "Symbol": "ES",
+        "Image": "https://assets.parqet.com/logos/symbol/ES?format=png"
+    },
+    {
+        "Company": "Expedia Group, Inc.",
+        "Symbol": "EXPE",
+        "Image": "https://assets.parqet.com/logos/symbol/EXPE?format=png"
+    },
+    {
+        "Company": "Kellanova",
+        "Symbol": "K",
+        "Image": "https://assets.parqet.com/logos/symbol/K?format=png"
+    },
+    {
+        "Company": "Packaging Corp of America",
+        "Symbol": "PKG",
+        "Image": "https://assets.parqet.com/logos/symbol/PKG?format=png"
+    },
+    {
+        "Company": "Steris Plc",
+        "Symbol": "STE",
+        "Image": "https://assets.parqet.com/logos/symbol/STE?format=png"
+    },
+    {
+        "Company": "Steel Dynamics Inc",
+        "Symbol": "STLD",
+        "Image": "https://assets.parqet.com/logos/symbol/STLD?format=png"
+    },
+    {
+        "Company": "Northern Trust Corp",
+        "Symbol": "NTRS",
+        "Image": "https://assets.parqet.com/logos/symbol/NTRS?format=png"
+    },
+    {
+        "Company": "Firstenergy Corp.",
+        "Symbol": "FE",
+        "Image": "https://assets.parqet.com/logos/symbol/FE?format=png"
+    },
+    {
+        "Company": "First Solar, Inc.",
+        "Symbol": "FSLR",
+        "Image": "https://assets.parqet.com/logos/symbol/FSLR?format=png"
+    },
+    {
+        "Company": "Cboe Global Markets, Inc.",
+        "Symbol": "CBOE",
+        "Image": "https://assets.parqet.com/logos/symbol/CBOE?format=png"
+    },
+    {
+        "Company": "Warner Bros. Discovery, Inc. Series a",
+        "Symbol": "WBD",
+        "Image": "https://assets.parqet.com/logos/symbol/WBD?format=png"
+    },
+    {
+        "Company": "Builders Firstsource, Inc.",
+        "Symbol": "BLDR",
+        "Image": "https://assets.parqet.com/logos/symbol/BLDR?format=png"
+    },
+    {
+        "Company": "Citizens Financial Group, Inc.",
+        "Symbol": "CFG",
+        "Image": "https://assets.parqet.com/logos/symbol/CFG?format=png"
+    },
+    {
+        "Company": "The Cooper Companies, Inc.",
+        "Symbol": "COO",
+        "Image": "https://assets.parqet.com/logos/symbol/COO?format=png"
+    },
+    {
+        "Company": "Omnicom Group Inc.",
+        "Symbol": "OMC",
+        "Image": "https://assets.parqet.com/logos/symbol/OMC?format=png"
+    },
+    {
+        "Company": "Zebra Technologies Corporation",
+        "Symbol": "ZBRA",
+        "Image": "https://assets.parqet.com/logos/symbol/ZBRA?format=png"
+    },
+    {
+        "Company": "International Paper Co.",
+        "Symbol": "IP",
+        "Image": "https://assets.parqet.com/logos/symbol/IP?format=png"
+    },
+    {
+        "Company": "Clorox Company",
+        "Symbol": "CLX",
+        "Image": "https://assets.parqet.com/logos/symbol/CLX?format=png"
+    },
+    {
+        "Company": "Labcorp Holdings Inc.",
+        "Symbol": "LH",
+        "Image": "https://assets.parqet.com/logos/symbol/LH?format=png"
+    },
+    {
+        "Company": "Darden Restaurants, Inc.",
+        "Symbol": "DRI",
+        "Image": "https://assets.parqet.com/logos/symbol/DRI?format=png"
+    },
+    {
+        "Company": "Nrg Energy, Inc.",
+        "Symbol": "NRG",
+        "Image": "https://assets.parqet.com/logos/symbol/NRG?format=png"
+    },
+    {
+        "Company": "Cms Energy Corporation",
+        "Symbol": "CMS",
+        "Image": "https://assets.parqet.com/logos/symbol/CMS?format=png"
+    },
+    {
+        "Company": "Molina Healthcare, Inc.",
+        "Symbol": "MOH",
+        "Image": "https://assets.parqet.com/logos/symbol/MOH?format=png"
+    },
+    {
+        "Company": "Live Nation Entertainment Inc.",
+        "Symbol": "LYV",
+        "Image": "https://assets.parqet.com/logos/symbol/LYV?format=png"
+    },
+    {
+        "Company": "Mccormick & Company, Incorporated Non-Vtg Cs",
+        "Symbol": "MKC",
+        "Image": "https://assets.parqet.com/logos/symbol/MKC?format=png"
+    },
+    {
+        "Company": "Centerpoint Energy, Inc.",
+        "Symbol": "CNP",
+        "Image": "https://assets.parqet.com/logos/symbol/CNP?format=png"
+    },
+    {
+        "Company": "Essex Property Trust, Inc",
+        "Symbol": "ESS",
+        "Image": "https://assets.parqet.com/logos/symbol/ESS?format=png"
+    },
+    {
+        "Company": "Invitation Homes Inc.",
+        "Symbol": "INVH",
+        "Image": "https://assets.parqet.com/logos/symbol/INVH?format=png"
+    },
+    {
+        "Company": "Ulta Beauty, Inc.",
+        "Symbol": "ULTA",
+        "Image": "https://assets.parqet.com/logos/symbol/ULTA?format=png"
+    },
+    {
+        "Company": "Southwest Airlines Co.",
+        "Symbol": "LUV",
+        "Image": "https://assets.parqet.com/logos/symbol/LUV?format=png"
+    },
+    {
+        "Company": "Snap-on Incorporated",
+        "Symbol": "SNA",
+        "Image": "https://assets.parqet.com/logos/symbol/SNA?format=png"
+    },
+    {
+        "Company": "Hologic Inc",
+        "Symbol": "HOLX",
+        "Image": "https://assets.parqet.com/logos/symbol/HOLX?format=png"
+    },
+    {
+        "Company": "Baxter International Inc.",
+        "Symbol": "BAX",
+        "Image": "https://assets.parqet.com/logos/symbol/BAX?format=png"
+    },
+    {
+        "Company": "Principal Financial Group, Inc.",
+        "Symbol": "PFG",
+        "Image": "https://assets.parqet.com/logos/symbol/PFG?format=png"
+    },
+    {
+        "Company": "Teradyne, Inc.",
+        "Symbol": "TER",
+        "Image": "https://assets.parqet.com/logos/symbol/TER?format=png"
+    },
+    {
+        "Company": "Ball Corporation",
+        "Symbol": "BALL",
+        "Image": "https://assets.parqet.com/logos/symbol/BALL?format=png"
+    },
+    {
+        "Company": "Las Vegas Sands Corp.",
+        "Symbol": "LVS",
+        "Image": "https://assets.parqet.com/logos/symbol/LVS?format=png"
+    },
+    {
+        "Company": "Jacobs Solutions Inc.",
+        "Symbol": "J",
+        "Image": "https://assets.parqet.com/logos/symbol/J?format=png"
+    },
+    {
+        "Company": "Mid-America Apartment Communities, Inc.",
+        "Symbol": "MAA",
+        "Image": "https://assets.parqet.com/logos/symbol/MAA?format=png"
+    },
+    {
+        "Company": "Coterra Energy Inc.",
+        "Symbol": "CTRA",
+        "Image": "https://assets.parqet.com/logos/symbol/CTRA?format=png"
+    },
+    {
+        "Company": "Factset Research Systems",
+        "Symbol": "FDS",
+        "Image": "https://assets.parqet.com/logos/symbol/FDS?format=png"
+    },
+    {
+        "Company": "W.R. Berkley Corporation",
+        "Symbol": "WRB",
+        "Image": "https://assets.parqet.com/logos/symbol/WRB?format=png"
+    },
+    {
+        "Company": "Keycorp",
+        "Symbol": "KEY",
+        "Image": "https://assets.parqet.com/logos/symbol/KEY?format=png"
+    },
+    {
+        "Company": "Alexandria Real Estate Equities, Inc.",
+        "Symbol": "ARE",
+        "Image": "https://assets.parqet.com/logos/symbol/ARE?format=png"
+    },
+    {
+        "Company": "Best Buy Company, Inc.",
+        "Symbol": "BBY",
+        "Image": "https://assets.parqet.com/logos/symbol/BBY?format=png"
+    },
+    {
+        "Company": "Trimble Inc.",
+        "Symbol": "TRMB",
+        "Image": "https://assets.parqet.com/logos/symbol/TRMB?format=png"
+    },
+    {
+        "Company": "Masco Corporation",
+        "Symbol": "MAS",
+        "Image": "https://assets.parqet.com/logos/symbol/MAS?format=png"
+    },
+    {
+        "Company": "Quest Diagnostics Inc.",
+        "Symbol": "DGX",
+        "Image": "https://assets.parqet.com/logos/symbol/DGX?format=png"
+    },
+    {
+        "Company": "Idex Corporation",
+        "Symbol": "IEX",
+        "Image": "https://assets.parqet.com/logos/symbol/IEX?format=png"
+    },
+    {
+        "Company": "Insulet Corporation",
+        "Symbol": "PODD",
+        "Image": "https://assets.parqet.com/logos/symbol/PODD?format=png"
+    },
+    {
+        "Company": "Dollar General Corp.",
+        "Symbol": "DG",
+        "Image": "https://assets.parqet.com/logos/symbol/DG?format=png"
+    },
+    {
+        "Company": "Genuine Parts Company",
+        "Symbol": "GPC",
+        "Image": "https://assets.parqet.com/logos/symbol/GPC?format=png"
+    },
+    {
+        "Company": "Pentair Plc",
+        "Symbol": "PNR",
+        "Image": "https://assets.parqet.com/logos/symbol/PNR?format=png"
+    },
+    {
+        "Company": "Moderna, Inc.",
+        "Symbol": "MRNA",
+        "Image": "https://assets.parqet.com/logos/symbol/MRNA?format=png"
+    },
+    {
+        "Company": "Expeditors International of Washington, Inc.",
+        "Symbol": "EXPD",
+        "Image": "https://assets.parqet.com/logos/symbol/EXPD?format=png"
+    },
+    {
+        "Company": "Tyson Foods, Inc.",
+        "Symbol": "TSN",
+        "Image": "https://assets.parqet.com/logos/symbol/TSN?format=png"
+    },
+    {
+        "Company": "Kimco Realty Corp.",
+        "Symbol": "KIM",
+        "Image": "https://assets.parqet.com/logos/symbol/KIM?format=png"
+    },
+    {
+        "Company": "Avery Dennison Corp.",
+        "Symbol": "AVY",
+        "Image": "https://assets.parqet.com/logos/symbol/AVY?format=png"
+    },
+    {
+        "Company": "Textron, Inc.",
+        "Symbol": "TXT",
+        "Image": "https://assets.parqet.com/logos/symbol/TXT?format=png"
+    },
+    {
+        "Company": "Gen Digital Inc.",
+        "Symbol": "GEN",
+        "Image": "https://assets.parqet.com/logos/symbol/GEN?format=png"
+    },
+    {
+        "Company": "Marathon Oil Corporation",
+        "Symbol": "MRO",
+        "Image": "https://assets.parqet.com/logos/symbol/MRO?format=png"
+    },
+    {
+        "Company": "Healthpeak Properties, Inc.",
+        "Symbol": "DOC",
+        "Image": "https://assets.parqet.com/logos/symbol/DOC?format=png"
+    },
+    {
+        "Company": "Akamai Technologies Inc",
+        "Symbol": "AKAM",
+        "Image": "https://assets.parqet.com/logos/symbol/AKAM?format=png"
+    },
+    {
+        "Company": "Viatris Inc.",
+        "Symbol": "VTRS",
+        "Image": "https://assets.parqet.com/logos/symbol/VTRS?format=png"
+    },
+    {
+        "Company": "Domino's Pizza Inc.",
+        "Symbol": "DPZ",
+        "Image": "https://assets.parqet.com/logos/symbol/DPZ?format=png"
+    },
+    {
+        "Company": "Nisource Inc.",
+        "Symbol": "NI",
+        "Image": "https://assets.parqet.com/logos/symbol/NI?format=png"
+    },
+    {
+        "Company": "Everest Group, Ltd.",
+        "Symbol": "EG",
+        "Image": "https://assets.parqet.com/logos/symbol/EG?format=png"
+    },
+    {
+        "Company": "Verisign Inc",
+        "Symbol": "VRSN",
+        "Image": "https://assets.parqet.com/logos/symbol/VRSN?format=png"
+    },
+    {
+        "Company": "Align Technology Inc",
+        "Symbol": "ALGN",
+        "Image": "https://assets.parqet.com/logos/symbol/ALGN?format=png"
+    },
+    {
+        "Company": "Jabil Inc.",
+        "Symbol": "JBL",
+        "Image": "https://assets.parqet.com/logos/symbol/JBL?format=png"
+    },
+    {
+        "Company": "The Estee Lauder Companies Inc. Class A",
+        "Symbol": "EL",
+        "Image": "https://assets.parqet.com/logos/symbol/EL?format=png"
+    },
+    {
+        "Company": "Revvity, Inc.",
+        "Symbol": "RVTY",
+        "Image": "https://assets.parqet.com/logos/symbol/RVTY?format=png"
+    },
+    {
+        "Company": "Cf Industries Holding, Inc.",
+        "Symbol": "CF",
+        "Image": "https://assets.parqet.com/logos/symbol/CF?format=png"
+    },
+    {
+        "Company": "Jb Hunt Transport Services Inc",
+        "Symbol": "JBHT",
+        "Image": "https://assets.parqet.com/logos/symbol/JBHT?format=png"
+    },
+    {
+        "Company": "Loews Corporation",
+        "Symbol": "L",
+        "Image": "https://assets.parqet.com/logos/symbol/L?format=png"
+    },
+    {
+        "Company": "Aptiv Plc",
+        "Symbol": "APTV",
+        "Image": "https://assets.parqet.com/logos/symbol/APTV?format=png"
+    },
+    {
+        "Company": "Amcor Plcs",
+        "Symbol": "AMCR",
+        "Image": "https://assets.parqet.com/logos/symbol/AMCR?format=png"
+    },
+    {
+        "Company": "Skyworks Solutions Inc",
+        "Symbol": "SWKS",
+        "Image": "https://assets.parqet.com/logos/symbol/SWKS?format=png"
+    },
+    {
+        "Company": "Alliant Energy Corporation",
+        "Symbol": "LNT",
+        "Image": "https://assets.parqet.com/logos/symbol/LNT?format=png"
+    },
+    {
+        "Company": "Pool Corporation",
+        "Symbol": "POOL",
+        "Image": "https://assets.parqet.com/logos/symbol/POOL?format=png"
+    },
+    {
+        "Company": "Nordson Corp",
+        "Symbol": "NDSN",
+        "Image": "https://assets.parqet.com/logos/symbol/NDSN?format=png"
+    },
+    {
+        "Company": "Stanley Black & Decker, Inc.",
+        "Symbol": "SWK",
+        "Image": "https://assets.parqet.com/logos/symbol/SWK?format=png"
+    },
+    {
+        "Company": "Evergy, Inc.",
+        "Symbol": "EVRG",
+        "Image": "https://assets.parqet.com/logos/symbol/EVRG?format=png"
+    },
+    {
+        "Company": "F5, Inc.",
+        "Symbol": "FFIV",
+        "Image": "https://assets.parqet.com/logos/symbol/FFIV?format=png"
+    },
+    {
+        "Company": "Rollins, Inc.",
+        "Symbol": "ROL",
+        "Image": "https://assets.parqet.com/logos/symbol/ROL?format=png"
+    },
+    {
+        "Company": "Conagra Brands, Inc.",
+        "Symbol": "CAG",
+        "Image": "https://assets.parqet.com/logos/symbol/CAG?format=png"
+    },
+    {
+        "Company": "Epam Systems, Inc.",
+        "Symbol": "EPAM",
+        "Image": "https://assets.parqet.com/logos/symbol/EPAM?format=png"
+    },
+    {
+        "Company": "Incyte Genomics Inc",
+        "Symbol": "INCY",
+        "Image": "https://assets.parqet.com/logos/symbol/INCY?format=png"
+    },
+    {
+        "Company": "Henry (Jack) & Associates",
+        "Symbol": "JKHY",
+        "Image": "https://assets.parqet.com/logos/symbol/JKHY?format=png"
+    },
+    {
+        "Company": "Udr, Inc.",
+        "Symbol": "UDR",
+        "Image": "https://assets.parqet.com/logos/symbol/UDR?format=png"
+    },
+    {
+        "Company": "Dollar Tree Inc.",
+        "Symbol": "DLTR",
+        "Image": "https://assets.parqet.com/logos/symbol/DLTR?format=png"
+    },
+    {
+        "Company": "Juniper Networks Inc",
+        "Symbol": "JNPR",
+        "Image": "https://assets.parqet.com/logos/symbol/JNPR?format=png"
+    },
+    {
+        "Company": "Super Micro Computer, Inc.",
+        "Symbol": "SMCI",
+        "Image": "https://assets.parqet.com/logos/symbol/SMCI?format=png"
+    },
+    {
+        "Company": "Dayforce, Inc.",
+        "Symbol": "DAY",
+        "Image": "https://assets.parqet.com/logos/symbol/DAY?format=png"
+    },
+    {
+        "Company": "C.H. Robinson Worldwide, Inc.",
+        "Symbol": "CHRW",
+        "Image": "https://assets.parqet.com/logos/symbol/CHRW?format=png"
+    },
+    {
+        "Company": "Camden Property Trust",
+        "Symbol": "CPT",
+        "Image": "https://assets.parqet.com/logos/symbol/CPT?format=png"
+    },
+    {
+        "Company": "Host Hotels & Resorts, Inc.",
+        "Symbol": "HST",
+        "Image": "https://assets.parqet.com/logos/symbol/HST?format=png"
+    },
+    {
+        "Company": "Allegion Public Limited Company",
+        "Symbol": "ALLE",
+        "Image": "https://assets.parqet.com/logos/symbol/ALLE?format=png"
+    },
+    {
+        "Company": "Universal Health Services, Inc. Class B",
+        "Symbol": "UHS",
+        "Image": "https://assets.parqet.com/logos/symbol/UHS?format=png"
+    },
+    {
+        "Company": "Bunge Global Sa",
+        "Symbol": "BG",
+        "Image": "https://assets.parqet.com/logos/symbol/BG?format=png"
+    },
+    {
+        "Company": "The J.M. Smucker Company",
+        "Symbol": "SJM",
+        "Image": "https://assets.parqet.com/logos/symbol/SJM?format=png"
+    },
+    {
+        "Company": "Eastman Chemical Company",
+        "Symbol": "EMN",
+        "Image": "https://assets.parqet.com/logos/symbol/EMN?format=png"
+    },
+    {
+        "Company": "Regency Centers Corporation",
+        "Symbol": "REG",
+        "Image": "https://assets.parqet.com/logos/symbol/REG?format=png"
+    },
+    {
+        "Company": "Bio-Techne Corp.",
+        "Symbol": "TECH",
+        "Image": "https://assets.parqet.com/logos/symbol/TECH?format=png"
+    },
+    {
+        "Company": "Bxp, Inc.",
+        "Symbol": "BXP",
+        "Image": "https://assets.parqet.com/logos/symbol/BXP?format=png"
+    },
+    {
+        "Company": "Carmax Inc.",
+        "Symbol": "KMX",
+        "Image": "https://assets.parqet.com/logos/symbol/KMX?format=png"
+    },
+    {
+        "Company": "Norwegian Cruise Line Holdings Ltd.s",
+        "Symbol": "NCLH",
+        "Image": "https://assets.parqet.com/logos/symbol/NCLH?format=png"
+    },
+    {
+        "Company": "Tapestry, Inc.",
+        "Symbol": "TPR",
+        "Image": "https://assets.parqet.com/logos/symbol/TPR?format=png"
+    },
+    {
+        "Company": "Albemarle Corporation",
+        "Symbol": "ALB",
+        "Image": "https://assets.parqet.com/logos/symbol/ALB?format=png"
+    },
+    {
+        "Company": "Lamb Weston Holdings, Inc.",
+        "Symbol": "LW",
+        "Image": "https://assets.parqet.com/logos/symbol/LW?format=png"
+    },
+    {
+        "Company": "The Interpublic Group of Companies, Inc.",
+        "Symbol": "IPG",
+        "Image": "https://assets.parqet.com/logos/symbol/IPG?format=png"
+    },
+    {
+        "Company": "Generac Holdings Inc",
+        "Symbol": "GNRC",
+        "Image": "https://assets.parqet.com/logos/symbol/GNRC?format=png"
+    },
+    {
+        "Company": "Paycom Software, Inc.",
+        "Symbol": "PAYC",
+        "Image": "https://assets.parqet.com/logos/symbol/PAYC?format=png"
+    },
+    {
+        "Company": "News Corporation Class A",
+        "Symbol": "NWSA",
+        "Image": "https://assets.parqet.com/logos/symbol/NWSA?format=png"
+    },
+    {
+        "Company": "Charles River Laboratories International, Inc.",
+        "Symbol": "CRL",
+        "Image": "https://assets.parqet.com/logos/symbol/CRL?format=png"
+    },
+    {
+        "Company": "Catalent, Inc.",
+        "Symbol": "CTLT",
+        "Image": "https://assets.parqet.com/logos/symbol/CTLT?format=png"
+    },
+    {
+        "Company": "Assurant, Inc.",
+        "Symbol": "AIZ",
+        "Image": "https://assets.parqet.com/logos/symbol/AIZ?format=png"
+    },
+    {
+        "Company": "Erie Indemnity Co",
+        "Symbol": "ERIE",
+        "Image": "https://assets.parqet.com/logos/symbol/ERIE?format=png"
+    },
+    {
+        "Company": "Solventum Corporation",
+        "Symbol": "SOLV",
+        "Image": "https://assets.parqet.com/logos/symbol/SOLV?format=png"
+    },
+    {
+        "Company": "Marketaxess Holdings Inc.",
+        "Symbol": "MKTX",
+        "Image": "https://assets.parqet.com/logos/symbol/MKTX?format=png"
+    },
+    {
+        "Company": "Pinnacle West Capital Corporation",
+        "Symbol": "PNW",
+        "Image": "https://assets.parqet.com/logos/symbol/PNW?format=png"
+    },
+    {
+        "Company": "Lkq Corporation",
+        "Symbol": "LKQ",
+        "Image": "https://assets.parqet.com/logos/symbol/LKQ?format=png"
+    },
+    {
+        "Company": "Fox Corporation Class A",
+        "Symbol": "FOXA",
+        "Image": "https://assets.parqet.com/logos/symbol/FOXA?format=png"
+    },
+    {
+        "Company": "Molson Coors Beverage Company Class B",
+        "Symbol": "TAP",
+        "Image": "https://assets.parqet.com/logos/symbol/TAP?format=png"
+    },
+    {
+        "Company": "Celanese Corporation",
+        "Symbol": "CE",
+        "Image": "https://assets.parqet.com/logos/symbol/CE?format=png"
+    },
+    {
+        "Company": "Globe Life Inc.",
+        "Symbol": "GL",
+        "Image": "https://assets.parqet.com/logos/symbol/GL?format=png"
+    },
+    {
+        "Company": "Aes Corporation",
+        "Symbol": "AES",
+        "Image": "https://assets.parqet.com/logos/symbol/AES?format=png"
+    },
+    {
+        "Company": "Enphase Energy, Inc.",
+        "Symbol": "ENPH",
+        "Image": "https://assets.parqet.com/logos/symbol/ENPH?format=png"
+    },
+    {
+        "Company": "Teleflex Incorporated",
+        "Symbol": "TFX",
+        "Image": "https://assets.parqet.com/logos/symbol/TFX?format=png"
+    },
+    {
+        "Company": "A.O. Smith Corporation",
+        "Symbol": "AOS",
+        "Image": "https://assets.parqet.com/logos/symbol/AOS?format=png"
+    },
+    {
+        "Company": "The Mosaic Company",
+        "Symbol": "MOS",
+        "Image": "https://assets.parqet.com/logos/symbol/MOS?format=png"
+    },
+    {
+        "Company": "Caesars Entertainment, Inc.",
+        "Symbol": "CZR",
+        "Image": "https://assets.parqet.com/logos/symbol/CZR?format=png"
+    },
+    {
+        "Company": "Campbell Soup Company",
+        "Symbol": "CPB",
+        "Image": "https://assets.parqet.com/logos/symbol/CPB?format=png"
+    },
+    {
+        "Company": "Ralph Lauren Corporation",
+        "Symbol": "RL",
+        "Image": "https://assets.parqet.com/logos/symbol/RL?format=png"
+    },
+    {
+        "Company": "Henry Schein Inc",
+        "Symbol": "HSIC",
+        "Image": "https://assets.parqet.com/logos/symbol/HSIC?format=png"
+    },
+    {
+        "Company": "Hormel Foods Corporation",
+        "Symbol": "HRL",
+        "Image": "https://assets.parqet.com/logos/symbol/HRL?format=png"
+    },
+    {
+        "Company": "Mgm Resorts International",
+        "Symbol": "MGM",
+        "Image": "https://assets.parqet.com/logos/symbol/MGM?format=png"
+    },
+    {
+        "Company": "Federal Realty Investment Trust",
+        "Symbol": "FRT",
+        "Image": "https://assets.parqet.com/logos/symbol/FRT?format=png"
+    },
+    {
+        "Company": "Hasbro, Inc.",
+        "Symbol": "HAS",
+        "Image": "https://assets.parqet.com/logos/symbol/HAS?format=png"
+    },
+    {
+        "Company": "Invesco Ltd",
+        "Symbol": "IVZ",
+        "Image": "https://assets.parqet.com/logos/symbol/IVZ?format=png"
+    },
+    {
+        "Company": "Wynn Resorts Ltd",
+        "Symbol": "WYNN",
+        "Image": "https://assets.parqet.com/logos/symbol/WYNN?format=png"
+    },
+    {
+        "Company": "Apa Corporation",
+        "Symbol": "APA",
+        "Image": "https://assets.parqet.com/logos/symbol/APA?format=png"
+    },
+    {
+        "Company": "Match Group, Inc",
+        "Symbol": "MTCH",
+        "Image": "https://assets.parqet.com/logos/symbol/MTCH?format=png"
+    },
+    {
+        "Company": "Borgwarner Inc.",
+        "Symbol": "BWA",
+        "Image": "https://assets.parqet.com/logos/symbol/BWA?format=png"
+    },
+    {
+        "Company": "Huntington Ingalls Industries, Inc.",
+        "Symbol": "HII",
+        "Image": "https://assets.parqet.com/logos/symbol/HII?format=png"
+    },
+    {
+        "Company": "Brown-Forman Corporation Class B",
+        "Symbol": "BF.B",
+        "Image": "https://assets.parqet.com/logos/symbol/BF.B?format=png"
+    },
+    {
+        "Company": "Mohawk Industries, Inc.",
+        "Symbol": "MHK",
+        "Image": "https://assets.parqet.com/logos/symbol/MHK?format=png"
+    },
+    {
+        "Company": "Fmc Corporation",
+        "Symbol": "FMC",
+        "Image": "https://assets.parqet.com/logos/symbol/FMC?format=png"
+    },
+    {
+        "Company": "Davita Inc.",
+        "Symbol": "DVA",
+        "Image": "https://assets.parqet.com/logos/symbol/DVA?format=png"
+    },
+    {
+        "Company": "Paramount Global Class B",
+        "Symbol": "PARA",
+        "Image": "https://assets.parqet.com/logos/symbol/PARA?format=png"
+    },
+    {
+        "Company": "Qorvo, Inc.",
+        "Symbol": "QRVO",
+        "Image": "https://assets.parqet.com/logos/symbol/QRVO?format=png"
+    },
+    {
+        "Company": "Walgreens Boots Alliance, Inc",
+        "Symbol": "WBA",
+        "Image": "https://assets.parqet.com/logos/symbol/WBA?format=png"
+    },
+    {
+        "Company": "Franklin Resources, Inc.",
+        "Symbol": "BEN",
+        "Image": "https://assets.parqet.com/logos/symbol/BEN?format=png"
+    },
+    {
+        "Company": "Fox Corporation Class B",
+        "Symbol": "FOX",
+        "Image": "https://assets.parqet.com/logos/symbol/FOX?format=png"
+    },
+    {
+        "Company": "Amentum Holdings, Inc.",
+        "Symbol": "AMTM",
+        "Image": "https://assets.parqet.com/logos/symbol/AMTM?format=png"
+    },
+    {
+        "Company": "News Corporation Class B",
+        "Symbol": "NWS",
+        "Image": "https://assets.parqet.com/logos/symbol/NWS?format=png"
+    }
+]
