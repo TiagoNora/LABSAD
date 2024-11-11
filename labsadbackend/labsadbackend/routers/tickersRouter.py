@@ -76,14 +76,21 @@ async def getTickers():
     soup = bs(request.text, "lxml")
     stats = soup.find('table', class_='table table-hover table-borderless table-sm')
     df = pd.read_html(str(stats))[0]
+
+    
     
     df['% Chg'] = df['% Chg'].str.strip('()-%')
-    df['% Chg'] = pd.to_numeric(df['% Chg'])
-    df['Chg'] = pd.to_numeric(df['Chg'])
+    df['% Chg'] = pd.to_numeric(df['% Chg'], errors='coerce')
+    df['Chg'] = pd.to_numeric(df['Chg'], errors='coerce')
     
-    df = df.drop(columns=['Chg', '% Chg'])
+    #df = df.drop(columns=['Chg', '% Chg'])
+    df = df.fillna(0)
     
     df['Image'] = df['Symbol'].apply(lambda symbol: f'https://assets.parqet.com/logos/symbol/{symbol}?format=png')
+
+
+    #print(df)
+    #print(df.isna().sum())
     
     return df.to_dict(orient='records')
 
