@@ -57,7 +57,7 @@ async def getTicker1Week(symbol: str):
 @router.get('/historialData1Month', summary="Get ticker data 1 month")
 async def getTicker1Month(symbol: str):
     ticker = yf.Ticker(symbol)
-    tickerPrices = ticker.history(period="1m")
+    tickerPrices = ticker.history(period="1mo")
     tickerPrices.reset_index(inplace=True)
     return tickerPrices.to_dict(orient='records')
 
