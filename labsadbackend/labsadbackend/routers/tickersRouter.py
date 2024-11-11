@@ -31,7 +31,7 @@ async def searchTicker(name: str):
         raise HTTPException(status_code=404, detail="No companies found for the provided ticker")
 
     # Return a list of matching tickers and names
-    return {"matching_tickers": matching_tickers}
+    return matching_tickers
 
 @router.get('/historialData', summary="Get ticker data")
 async def getTicker(symbol: str):
