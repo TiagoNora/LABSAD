@@ -40,6 +40,34 @@ async def getTicker(symbol: str):
     tickerPrices.reset_index(inplace=True)
     return tickerPrices.to_dict(orient='records')
 
+@router.get('/historialData1Week', summary="Get ticker data 1 week")
+async def getTicker1Week(symbol: str):
+    ticker = yf.Ticker(symbol)
+    tickerPrices = ticker.history(period="5d")
+    tickerPrices.reset_index(inplace=True)
+    return tickerPrices.to_dict(orient='records')
+
+@router.get('/historialDataYtd', summary="Get ticker data year to date")
+async def getTicker1Week(symbol: str):
+    ticker = yf.Ticker(symbol)
+    tickerPrices = ticker.history(period="ytd")
+    tickerPrices.reset_index(inplace=True)
+    return tickerPrices.to_dict(orient='records')
+
+@router.get('/historialData1Month', summary="Get ticker data 1 month")
+async def getTicker1Month(symbol: str):
+    ticker = yf.Ticker(symbol)
+    tickerPrices = ticker.history(period="1m")
+    tickerPrices.reset_index(inplace=True)
+    return tickerPrices.to_dict(orient='records')
+
+@router.get('/historialData1Year', summary="Get ticker data 1 year")
+async def getTicker1Year(symbol: str):
+    ticker = yf.Ticker(symbol)
+    tickerPrices = ticker.history(period="1y")
+    tickerPrices.reset_index(inplace=True)
+    return tickerPrices.to_dict(orient='records')
+
 @router.get('/', summary="Get all tickers")
 async def getTickers():
     url = 'https://www.slickcharts.com/sp500'
