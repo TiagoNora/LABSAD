@@ -36,7 +36,7 @@ async def searchTicker(name: str):
 @router.get('/historialData', summary="Get ticker data")
 async def getTicker(symbol: str):
     ticker = yf.Ticker(symbol)
-    tickerPrices = ticker.history(period="max")
+    tickerPrices = ticker.history(period="5y")
     tickerPrices.reset_index(inplace=True)
     return tickerPrices.to_dict(orient='records')
 
