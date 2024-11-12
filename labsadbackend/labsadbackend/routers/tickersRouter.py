@@ -147,3 +147,22 @@ async def getTickerDataFromDate(symbol: str, date: str):
     
     ticket = await repo.searchValueOfTicketFromDate(symbol, date)
     return ticket
+
+@router.get('/getInfo', summary="Get ticker info")
+async def getTickerInfo(symbol: str):
+    ticker = yf.Ticker(symbol)
+    info = ticker.info
+    return info
+
+@router.get('/getNews', summary="Get ticker news")
+async def getTickerNews(symbol: str):
+    ticker = yf.Ticker(symbol)
+    news = ticker.news
+    return news
+
+@router.get('/getRecommendations', summary="Get ticker recommendations")
+async def getTickerRecommendations(symbol: str):
+    ticker = yf.Ticker(symbol)
+    recommendations = ticker.recommendations
+    return recommendations
+
