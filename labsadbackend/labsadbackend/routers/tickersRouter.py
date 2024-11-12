@@ -164,5 +164,7 @@ async def getTickerNews(symbol: str):
 async def getTickerRecommendations(symbol: str):
     ticker = yf.Ticker(symbol)
     recommendations = ticker.recommendations
-    return recommendations
+    recommendations = recommendations.reset_index()
+    recommendations_dict = recommendations.to_dict(orient='records')
+    return recommendations_dict
 
