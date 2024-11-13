@@ -7,7 +7,7 @@ import os
 import json
 from datetime import datetime, timedelta
 from labsadbackend.repo import *
-
+import functools
 router = APIRouter(prefix='/tickers', tags=['TICKERS'])
 
 def load_sp500_tickers():
@@ -38,6 +38,7 @@ async def getTicker(symbol: str):
     ticker = yf.Ticker(symbol)
     tickerPrices = ticker.history(period="5y")
     tickerPrices.reset_index(inplace=True)
+    
     return tickerPrices.to_dict(orient='records')
 
 @router.get('/historialData1Week', summary="Get ticker data 1 week")
@@ -68,6 +69,7 @@ async def getTicker1Year(symbol: str):
     tickerPrices.reset_index(inplace=True)
     return tickerPrices.to_dict(orient='records')
 
+@functools.cache
 @router.get('/', summary="Get all tickers")
 async def getTickers():
     url = 'https://www.slickcharts.com/sp500'
@@ -83,14 +85,10 @@ async def getTickers():
     df['% Chg'] = pd.to_numeric(df['% Chg'], errors='coerce')
     df['Chg'] = pd.to_numeric(df['Chg'], errors='coerce')
     
-    #df = df.drop(columns=['Chg', '% Chg'])
+    df = df.drop(columns=['Chg', '% Chg', 'Price'])
     df = df.fillna(0)
     
     df['Image'] = df['Symbol'].apply(lambda symbol: f'https://assets.parqet.com/logos/symbol/{symbol}?format=png')
-
-
-    #print(df)
-    #print(df.isna().sum())
     
     return df.to_dict(orient='records')
 
