@@ -166,3 +166,10 @@ async def getTickerRecommendations(symbol: str):
     recommendations_dict = recommendations.to_dict(orient='records')
     return recommendations_dict
 
+@router.get('/getInstitutionalHolders', summary="Get ticker institutional holders")
+async def getTickerInstitutionalHolders(symbol: str):
+    ticker = yf.Ticker(symbol)
+    institutional_holders = ticker.institutional_holders
+    institutional_holders = institutional_holders.reset_index()
+    institutional_holders_dict = institutional_holders.to_dict(orient='records')
+    return institutional_holders_dict
