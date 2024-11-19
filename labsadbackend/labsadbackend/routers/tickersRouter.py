@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException
 import yfinance as yf
 import pandas as pd
 import requests
@@ -8,7 +8,6 @@ import json
 from datetime import datetime, timedelta
 from labsadbackend.repo import *
 import functools
-
 router = APIRouter(prefix='/tickers', tags=['TICKERS'])
 
 def load_sp500_tickers():
@@ -166,12 +165,4 @@ async def getTickerRecommendations(symbol: str):
     recommendations = recommendations.reset_index()
     recommendations_dict = recommendations.to_dict(orient='records')
     return recommendations_dict
-
-@router.get('/getInstitutionalHolders', summary="Get ticker institutional holders")
-async def getTickerInstitutionalHolders(symbol: str):
-    ticker = yf.Ticker(symbol)
-    institutional_holders = ticker.institutional_holders
-    institutional_holders = institutional_holders.reset_index()
-    institutional_holders_dict = institutional_holders.to_dict(orient='records')
-    return institutional_holders_dict
 

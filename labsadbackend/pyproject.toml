@@ -6,7 +6,7 @@ authors = ["Tiago Nora <33982771+TiagoNora@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.12.7"
+python = "^3.13"
 yfinance = "^0.2.48"
 requests = "^2.32.3"
 pandas = "^2.2.3"
@@ -17,10 +17,6 @@ ujson = "^5.10.0"
 pymongo = "^4.10.1"
 redis = "^5.2.0"
 setuptools = "^75.5.0"
-xgboost = "^2.1.2"
-scikit-learn = "^1.5.2"
-matplotlib = "^3.9.2"
-websockets = "^14.1"
 
 
 [build-system]
