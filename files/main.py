@@ -3,6 +3,9 @@ import pandas as pd
 import requests
 from pymongo import MongoClient
 import warnings
+from datetime import datetime
+import pytz
+
 warnings.filterwarnings('ignore')
 
 def insert_stocks():
@@ -61,19 +64,35 @@ def insert_stocks():
             csv_path = os.path.join(csv_directory, fname)
             df = pd.read_csv(csv_path)
 
-            df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
-            print(df.info())
-            print(df['Date'].head())
-            df['Date'] = df['Date'].dt.tz_localize(None)
-            df['Date'] = pd.to_datetime(df['Date'], errors='coerce').dt.tz_localize('America/New_York', ambiguous='NaT', nonexistent='NaT')
+            df['Date'] = df['Date'].apply(convert_to_utc)
+
+            # # Step 1: Convert the 'Date' column to pandas datetime (handling timezone offsets)
+            df['Date'] = pd.to_datetime(df['Date'])
+
+           
+
+            # # Step 2: Convert the 'Date' to UTC (removing timezone information and converting to UTC)
+            # df['Date'] = df['Date'].dt.tz_convert('UTC')
+
+            # # Step 3: Format the 'Date' column to the desired ISO 8601 format
+            # df['Date'] = df['Date'].dt.strftime('%Y-%m-%dT%H:%M:%S.%fZ')  # Format to ISO 8601 with milliseconds
+            # df['Date'] = df['Date'].str[:-3]  # Remove extra microseconds, keeping only 3 decimal places for milliseconds
+           # df['Date'] = df['Date'].dt.tz_localize(None)
+            #print(df.info())
+            #print(df['Date'].head())
+            
+            #df['Date'] = df['Date'].dt.tz_localize(None)
+            #df['Date'] = pd.to_datetime(df['Date'], errors='coerce').dt.tz_localize('America/New_York', ambiguous='NaT', nonexistent='NaT')
 
             # Convert to UTC for MongoDB storage
-            df['Date'] = df['Date'].dt.tz_convert('UTC')
+           # df['Date'] = df['Date'].dt.tz_convert('UTC')
 
-            #print(df)
+           
 
-            df.to_csv(f"files/{fname}", index=False)
+            print(df['Date'].head())
             
+            df.to_csv(f"{fname}", index=False)
+            break
             # print(f"Processing Stock with symbol {symbol}")
 
             # # Get the stock details from the ticker dictionary
@@ -103,6 +122,19 @@ def insert_stocks():
 
     print("All files processed.")
     return None
+
+
+def convert_to_utc(date_str):
+    # Parse the original datetime string with timezone info
+    date_obj = datetime.strptime(date_str, '%Y-%m-%d %H:%M:%S%z')
+    
+    # Convert to UTC
+    utc_date_obj = date_obj.astimezone(pytz.utc)
+    
+    # Format to ISO 8601 with milliseconds
+    formatted_date = utc_date_obj.strftime('%Y-%m-%dT%H:%M:%S.000+00:00')
+    
+    return formatted_date
 
 # Execute the function
 if __name__ == "__main__":
