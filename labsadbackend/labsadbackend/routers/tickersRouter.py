@@ -7,7 +7,7 @@ import os
 import json
 from datetime import datetime, timedelta
 from labsadbackend.repo import *
-
+import functools
 router = APIRouter(prefix='/tickers', tags=['TICKERS'])
 
 def load_sp500_tickers():
@@ -38,8 +38,38 @@ async def getTicker(symbol: str):
     ticker = yf.Ticker(symbol)
     tickerPrices = ticker.history(period="5y")
     tickerPrices.reset_index(inplace=True)
+    
     return tickerPrices.to_dict(orient='records')
 
+@router.get('/historialData1Week', summary="Get ticker data 1 week")
+async def getTicker1Week(symbol: str):
+    ticker = yf.Ticker(symbol)
+    tickerPrices = ticker.history(period="5d")
+    tickerPrices.reset_index(inplace=True)
+    return tickerPrices.to_dict(orient='records')
+
+@router.get('/historialDataYtd', summary="Get ticker data year to date")
+async def getTicker1Week(symbol: str):
+    ticker = yf.Ticker(symbol)
+    tickerPrices = ticker.history(period="ytd")
+    tickerPrices.reset_index(inplace=True)
+    return tickerPrices.to_dict(orient='records')
+
+@router.get('/historialData1Month', summary="Get ticker data 1 month")
+async def getTicker1Month(symbol: str):
+    ticker = yf.Ticker(symbol)
+    tickerPrices = ticker.history(period="1mo")
+    tickerPrices.reset_index(inplace=True)
+    return tickerPrices.to_dict(orient='records')
+
+@router.get('/historialData1Year', summary="Get ticker data 1 year")
+async def getTicker1Year(symbol: str):
+    ticker = yf.Ticker(symbol)
+    tickerPrices = ticker.history(period="1y")
+    tickerPrices.reset_index(inplace=True)
+    return tickerPrices.to_dict(orient='records')
+
+@functools.cache
 @router.get('/', summary="Get all tickers")
 async def getTickers():
     url = 'https://www.slickcharts.com/sp500'
@@ -55,14 +85,10 @@ async def getTickers():
     df['% Chg'] = pd.to_numeric(df['% Chg'], errors='coerce')
     df['Chg'] = pd.to_numeric(df['Chg'], errors='coerce')
     
-    #df = df.drop(columns=['Chg', '% Chg'])
+    df = df.drop(columns=['Chg', '% Chg', 'Price'])
     df = df.fillna(0)
     
     df['Image'] = df['Symbol'].apply(lambda symbol: f'https://assets.parqet.com/logos/symbol/{symbol}?format=png')
-
-
-    #print(df)
-    #print(df.isna().sum())
     
     return df.to_dict(orient='records')
 
@@ -119,3 +145,31 @@ async def getTickerDataFromDate(symbol: str, date: str):
     
     ticket = await repo.searchValueOfTicketFromDate(symbol, date)
     return ticket
+
+@router.get('/getInfo', summary="Get ticker info")
+async def getTickerInfo(symbol: str):
+    ticker = yf.Ticker(symbol)
+    info = ticker.info
+    return info
+
+@router.get('/getNews', summary="Get ticker news")
+async def getTickerNews(symbol: str):
+    ticker = yf.Ticker(symbol)
+    news = ticker.news
+    return news
+
+@router.get('/getRecommendations', summary="Get ticker recommendations")
+async def getTickerRecommendations(symbol: str):
+    ticker = yf.Ticker(symbol)
+    recommendations = ticker.recommendations
+    recommendations = recommendations.reset_index()
+    recommendations_dict = recommendations.to_dict(orient='records')
+    return recommendations_dict
+
+@router.get('/getInstitutionalHolders', summary="Get ticker institutional holders")
+async def getTickerInstitutionalHolders(symbol: str):
+    ticker = yf.Ticker(symbol)
+    institutional_holders = ticker.institutional_holders
+    institutional_holders = institutional_holders.reset_index()
+    institutional_holders_dict = institutional_holders.to_dict(orient='records')
+    return institutional_holders_dict
