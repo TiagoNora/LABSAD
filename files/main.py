@@ -51,7 +51,7 @@ def insert_stocks():
     # Get the directory of the current script file
     csv_directory = os.path.dirname(os.path.abspath(__file__))
 
-    # Process each CSV file containing daily stock data
+    #Process each CSV file containing daily stock data
     for fname in os.listdir(csv_directory):
         if fname.endswith("_daily_data.csv"):
 
@@ -61,8 +61,14 @@ def insert_stocks():
             csv_path = os.path.join(csv_directory, fname)
             df = pd.read_csv(csv_path)
 
-            df['Date'] = pd.to_datetime(df['Date'], errors='coerce')
-            df['Symbol'] = symbol
+            df['Date'] = pd.to_datetime(df['Date'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+            print(df.info())
+            print(df['Date'].head())
+            df['Date'] = df['Date'].dt.tz_localize(None)
+            df['Date'] = pd.to_datetime(df['Date'], errors='coerce').dt.tz_localize('America/New_York', ambiguous='NaT', nonexistent='NaT')
+
+            # Convert to UTC for MongoDB storage
+            df['Date'] = df['Date'].dt.tz_convert('UTC')
 
             #print(df)
 
