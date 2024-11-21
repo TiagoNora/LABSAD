@@ -8,6 +8,12 @@ import json
 from datetime import datetime, timedelta
 from labsadbackend.repo import *
 import functools
+import numpy as np
+from tensorflow.keras.models import load_model
+import joblib
+
+
+
 router = APIRouter(prefix='/tickers', tags=['TICKERS'])
 
 def load_sp500_tickers():
@@ -173,3 +179,17 @@ async def getTickerInstitutionalHolders(symbol: str):
     institutional_holders = institutional_holders.reset_index()
     institutional_holders_dict = institutional_holders.to_dict(orient='records')
     return institutional_holders_dict
+
+
+@router.get('/getStockForecast', summary='Get 7 days of future predictions for a specific stock')
+async def getForecastsTicker(symbol: str):
+    # Load the model and scalers
+    model = load_model("models/lstm_stock_model.h5")
+    scaler_X = joblib.load("models/scaler_X.pkl")
+    scaler_Y = joblib.load("models/scaler_Y.pkl")
+    ticker = yf.Ticker(symbol)
+    df = ticker.history(period="max")
+
+    print(df)
+    return None
+
