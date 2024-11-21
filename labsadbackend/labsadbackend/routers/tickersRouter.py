@@ -193,3 +193,12 @@ async def getForecastsTicker(symbol: str):
     print(df)
     return None
 
+@router.get('/searchPortfolio', summary="Search for a ticker for portfolio")
+async def searchTicker(name: str):
+    matching_tickers = [company for company in tickers if company["Company"].lower().startswith(name.lower())]
+
+    if not matching_tickers:
+        raise HTTPException(status_code=404, detail="No companies found for the provided ticker")
+
+    # Return a list of matching tickers and names
+    return matching_tickers[:5]
