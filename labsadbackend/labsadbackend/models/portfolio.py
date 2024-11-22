@@ -15,6 +15,8 @@ class Stock(BaseModel):
 class StockDelete(BaseModel):
     symbol: str
     quantity: int
+    buyPrice: float
+    buyDate: str
 
 class Portfolio(BaseModel):
     name: str
