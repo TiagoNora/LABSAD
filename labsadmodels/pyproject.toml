@@ -6,10 +6,25 @@ authors = ["Tiago Nora <33982771+TiagoNora@users.noreply.github.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.10"
-uvicorn = "^0.32.1"
 fastapi = "^0.115.5"
 fastapi-utilities = "^0.3.0"
+python = ">=3.10.11,<3.11"
+yfinance = "^0.2.48"
+requests = "^2.32.3"
+pandas = "^2.2.3"
+beautifulsoup4 = "^4.12.3"
+uvicorn = "^0.32.0"
+ujson = "^5.10.0"
+pymongo = "^4.10.1"
+redis = "^5.2.0"
+setuptools = "^75.5.0"
+tensorflow = "2.8.0"
+tensorflow-io-gcs-filesystem = "0.25.0"
+protobuf = "3.20"
+numpy = "1.26.0"
+joblib = "^1.4.2"
+scikit-learn = "^1.5.2"
+jsonify = "^0.5"
 
 
 [build-system]
