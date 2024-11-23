@@ -7,6 +7,8 @@ import os
 import json
 from labsadbackend.repo import *
 import functools
+from pymongo import MongoClient
+
 
 
 router = APIRouter(prefix='/tickers', tags=['TICKERS'])
@@ -184,4 +186,29 @@ async def searchTicker(name: str):
 
     # Return a list of matching tickers and names
     return matching_tickers[:5]
+
+@router.get('/getForecasts', summary="Obtain 7 days of forecasts for a given company")
+async def getForecasts7Days(symbol: str):
+    
+    uri = 'mongodb://mongoadmin:a79c987b4dce244e9bc21620@vsgate-s1.dei.isep.ipp.pt:10777'  # MongoDB connection URI
+    db_name = 'labsad'  # Replace with your database name
+    stocks_forecast = 'stocksForecasts'
+
+    # # Initialize MongoDB client
+    client = MongoClient(uri)
+    db = client[db_name]
+    stocks_forecasts_collection = db[stocks_forecast]
+    document = stocks_forecasts_collection.find_one({"symbol": symbol})
+
+    if document:
+        # If the document exists, return the 7 predictions
+        predictions = document.get("predictions", [])
+        client.close()
+        return {
+                "symbol": symbol,
+                "predictions": predictions
+            }
+    else:
+        print(f"No document found for symbol: {symbol}")
+        return None
 
