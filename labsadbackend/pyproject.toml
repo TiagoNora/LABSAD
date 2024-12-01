@@ -17,6 +17,7 @@ ujson = "^5.10.0"
 pymongo = "^4.10.1"
 redis = "^5.2.0"
 setuptools = "^75.5.0"
+fredapi = "^0.5.2"
 
 
 
