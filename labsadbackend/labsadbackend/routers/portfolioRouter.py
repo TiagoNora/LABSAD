@@ -158,6 +158,8 @@ def neg_sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate):
     return -sharpe_ratio(weights, log_returns, cov_matrix, risk_free_rate)
 
 
+
+
 # Function for maximizing returns
 def optimize_max_returns(tickerList):
     end_date = datetime.today()
@@ -173,10 +175,13 @@ def optimize_max_returns(tickerList):
     constraints = {'type': 'eq', 'fun': lambda weights: np.sum(weights) - 1}
     bounds = [(0, 0.4) for _ in range(len(tickerList))]
     initial_weights = np.array([1 / len(tickerList)] * len(tickerList))
-    
+
+
     # Negating expected return to maximize
-    def neg_expected_return(weights):
-        return -expected_return(weights, log_returns)
+    def neg_expected_return(weights, log_returns):
+        return -(np.sum(log_returns.mean()*weights)*252)
+    
+    
     
     optimized_results = minimize(neg_expected_return, initial_weights, method='SLSQP', constraints=constraints, bounds=bounds)
     optimal_weights = optimized_results.x
@@ -191,6 +196,8 @@ def optimize_max_returns(tickerList):
         "Optimal Portfolio Volatility": round(optimal_portfolio_volatility, 4),
     }
     return result
+
+
 
 
 # Function for minimizing risk
@@ -227,3 +234,6 @@ def optimize_min_risk(tickerList):
         "Optimal Portfolio Volatility": round(optimal_portfolio_volatility, 4),
     }
     return result
+
+
+
