@@ -133,13 +133,18 @@ def optimize_stock_list(tickerList):
     optimal_portfolio_volatility = standard_deviation(optimal_weights, cov_matrix)
     optimal_sharpe_ratio = sharpe_ratio(optimal_weights, log_returns, cov_matrix, risk_free_rate)
 
+    nStocks = len(tickerList)
+
      # Create a dictionary to hold the data
     result = {
-        "Optimal Weights": {ticker: round(weight, 4) for ticker, weight in zip(tickerList, optimal_weights)},
+        "Optimal Weights": {},
         "Optimal Portfolio Return": round(optimal_portfolio_return, 4),
         "Optimal Portfolio Volatility": round(optimal_portfolio_volatility, 4),
         "Optimal Sharpe Ratio": round(optimal_sharpe_ratio, 4)
     }
+
+    for n in range(nStocks):
+       result['Optimal Weights'][f'Asset {n}'] = {'name' : tickerList[n], 'value':optimal_weights[n]}
 
     return result
 
@@ -176,11 +181,11 @@ def optimize_max_returns(tickerList):
     bounds = [(0, 0.4) for _ in range(len(tickerList))]
     initial_weights = np.array([1 / len(tickerList)] * len(tickerList))
 
-
-    # Negating expected return to maximize
-    def neg_expected_return(weights, log_returns):
-        return -(np.sum(log_returns.mean()*weights)*252)
     
+    # Negating expected return to maximize
+    def neg_expected_return(weights):
+        return -expected_return(weights, log_returns)
+        
     
     
     optimized_results = minimize(neg_expected_return, initial_weights, method='SLSQP', constraints=constraints, bounds=bounds)
@@ -189,12 +194,17 @@ def optimize_max_returns(tickerList):
     # Portfolio metrics
     optimal_portfolio_return = expected_return(optimal_weights, log_returns)
     optimal_portfolio_volatility = standard_deviation(optimal_weights, log_returns.cov() * 252)
+    nStocks = len(tickerList)
     
     result = {
-        "Optimal Weights": {ticker: round(weight, 4) for ticker, weight in zip(tickerList, optimal_weights)},
+        "Optimal Weights": {},
         "Optimal Portfolio Return": round(optimal_portfolio_return, 4),
         "Optimal Portfolio Volatility": round(optimal_portfolio_volatility, 4),
     }
+
+    for n in range(nStocks):
+       result['Optimal Weights'][f'Asset {n}'] = {'name' : tickerList[n], 'value':optimal_weights[n]}
+
     return result
 
 
@@ -227,12 +237,18 @@ def optimize_min_risk(tickerList):
     # Portfolio metrics
     optimal_portfolio_return = expected_return(optimal_weights, log_returns)
     optimal_portfolio_volatility = standard_deviation(optimal_weights, cov_matrix)
+
+    nStocks = len(tickerList)
     
     result = {
-        "Optimal Weights": {ticker: round(weight, 4) for ticker, weight in zip(tickerList, optimal_weights)},
+        "Optimal Weights": {},
         "Optimal Portfolio Return": round(optimal_portfolio_return, 4),
         "Optimal Portfolio Volatility": round(optimal_portfolio_volatility, 4),
     }
+
+    for n in range(nStocks):
+       result['Optimal Weights'][f'Asset {n}'] = {'name' : tickerList[n], 'value':optimal_weights[n]}
+       
     return result
 
 
