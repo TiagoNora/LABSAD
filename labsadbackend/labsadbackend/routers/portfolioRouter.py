@@ -65,7 +65,7 @@ async def optimizePortfolio(name: str, email: str):
     return optimize_stock_list(tickerList)
 
 
-@router.get('/portfolioOptimizationMaxReturns', summary="Given a list a tickers, an optimization suggestion is provided")
+@router.get('/portfolioOptimizationMaxReturns', summary="Given a list a tickers, an optimization suggestion is provided with the intention of maximizing returns")
 async def optimizePortfolioMaxReturns(name: str, email: str):
     repo = PortfolioRepo()
     portfolio = repo.getPortfolio(name, email)
@@ -76,7 +76,7 @@ async def optimizePortfolioMaxReturns(name: str, email: str):
     return optimize_max_returns(tickerList)
     
 
-@router.get('/portfolioOptimizationMinRisk', summary="Given a list a tickers, an optimization suggestion is provided")
+@router.get('/portfolioOptimizationMinRisk', summary="Given a list a tickers, an optimization suggestion is provided with the intention of minimizing risks")
 async def optimizePortfolioMinRisk(name: str, email: str):
     repo = PortfolioRepo()
     portfolio = repo.getPortfolio(name, email)
