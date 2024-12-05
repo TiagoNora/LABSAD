@@ -135,16 +135,19 @@ def optimize_stock_list(tickerList):
 
     nStocks = len(tickerList)
 
+    OW = ""
+    for n in range(nStocks):
+       OW = OW + (f'{tickerList[n]},{round(optimal_weights[n], 2)}')
+
      # Create a dictionary to hold the data
     result = {
-        "Optimal Weights": {},
+        "Optimal Weights": OW,
         "Optimal Portfolio Return": round(optimal_portfolio_return, 4),
         "Optimal Portfolio Volatility": round(optimal_portfolio_volatility, 4),
         "Optimal Sharpe Ratio": round(optimal_sharpe_ratio, 4)
     }
 
-    for n in range(nStocks):
-       result['Optimal Weights'][f'Asset {n}'] = {'name' : tickerList[n], 'value':optimal_weights[n]}
+
 
     return result
 
@@ -195,15 +198,18 @@ def optimize_max_returns(tickerList):
     optimal_portfolio_return = expected_return(optimal_weights, log_returns)
     optimal_portfolio_volatility = standard_deviation(optimal_weights, log_returns.cov() * 252)
     nStocks = len(tickerList)
+
+    OW = ""
+    for n in range(nStocks):
+       OW = OW + (f'{tickerList[n]},{round(optimal_weights[n], 2)}')
     
     result = {
-        "Optimal Weights": {},
+        "Optimal Weights": OW,
         "Optimal Portfolio Return": round(optimal_portfolio_return, 4),
         "Optimal Portfolio Volatility": round(optimal_portfolio_volatility, 4),
     }
 
-    for n in range(nStocks):
-       result['Optimal Weights'][f'Asset {n}'] = {'name' : tickerList[n], 'value':optimal_weights[n]}
+    
 
     return result
 
@@ -239,15 +245,18 @@ def optimize_min_risk(tickerList):
     optimal_portfolio_volatility = standard_deviation(optimal_weights, cov_matrix)
 
     nStocks = len(tickerList)
+
+    OW = ""
+    for n in range(nStocks):
+       OW = OW + (f'{tickerList[n]},{round(optimal_weights[n], 2)}')
     
     result = {
-        "Optimal Weights": {},
+        "Optimal Weights": OW,
         "Optimal Portfolio Return": round(optimal_portfolio_return, 4),
         "Optimal Portfolio Volatility": round(optimal_portfolio_volatility, 4),
     }
 
-    for n in range(nStocks):
-       result['Optimal Weights'][f'Asset {n}'] = {'name' : tickerList[n], 'value':optimal_weights[n]}
+
        
     return result
 
