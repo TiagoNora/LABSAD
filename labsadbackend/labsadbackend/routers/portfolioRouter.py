@@ -137,7 +137,7 @@ def optimize_stock_list(tickerList):
 
     OW = ""
     for n in range(nStocks):
-       OW = OW + (f'{tickerList[n]},{round(optimal_weights[n], 2)}')
+       OW = OW + (f'{tickerList[n]},{round(optimal_weights[n], 2)},')
 
      # Create a dictionary to hold the data
     result = {
@@ -201,7 +201,7 @@ def optimize_max_returns(tickerList):
 
     OW = ""
     for n in range(nStocks):
-       OW = OW + (f'{tickerList[n]},{round(optimal_weights[n], 2)}')
+       OW = OW + (f'{tickerList[n]},{round(optimal_weights[n], 2)},')
     
     result = {
         "Optimal Weights": OW,
@@ -248,7 +248,7 @@ def optimize_min_risk(tickerList):
 
     OW = ""
     for n in range(nStocks):
-       OW = OW + (f'{tickerList[n]},{round(optimal_weights[n], 2)}')
+       OW = OW + (f'{tickerList[n]},{round(optimal_weights[n], 2)},')
     
     result = {
         "Optimal Weights": OW,
