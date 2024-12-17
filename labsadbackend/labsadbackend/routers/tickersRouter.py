@@ -13,6 +13,13 @@ from pymongo import MongoClient
 
 router = APIRouter(prefix='/tickers', tags=['TICKERS'])
 
+@router.get('/relatedStocks', summary="Get related stocks")
+async def getRelatedStocks(symbol: str):
+    ticker = yf.Ticker(symbol)
+    sector = yf.Sector(ticker.info.get('sectorKey'))
+    industry = yf.Industry(ticker.info.get('industryKey'))
+    return(sector.top_companies)
+
 def load_sp500_tickers():
     try:
         with open('companysInfo.json', 'r') as file:
@@ -211,4 +218,6 @@ async def getForecasts7Days(symbol: str):
     else:
         print(f"No document found for symbol: {symbol}")
         return None
+    
+
 
