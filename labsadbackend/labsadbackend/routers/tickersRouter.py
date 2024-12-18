@@ -17,8 +17,10 @@ router = APIRouter(prefix='/tickers', tags=['TICKERS'])
 async def getRelatedStocks(symbol: str):
     ticker = yf.Ticker(symbol)
     sector = yf.Sector(ticker.info.get('sectorKey'))
-    industry = yf.Industry(ticker.info.get('industryKey'))
-    return(sector.top_companies)
+    name_dict = sector.top_companies.get("name", {})
+    transformed = [{"symbol": key, "name": value} for key, value in name_dict.items()]
+    return {"tickers": transformed[:5]}
+
 
 def load_sp500_tickers():
     try:
