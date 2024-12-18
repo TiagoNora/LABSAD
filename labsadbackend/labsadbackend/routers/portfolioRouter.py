@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, HTTPException, WebSocket, WebSocketDisconnect
+from fastapi import APIRouter, Depends, HTTPException, WebSocket, WebSocketDisconnect, File, UploadFile
 import asyncio
 from labsadbackend.repo import *
 from labsadbackend.models import *
@@ -8,7 +8,10 @@ from scipy.optimize import minimize
 import yfinance as yf
 from datetime import datetime, timedelta
 from fredapi import Fred
-
+from fastapi.staticfiles import StaticFiles
+import base64
+import uuid
+import os
 
 router = APIRouter(prefix='/portfolio', tags=['PORTFOLIO'])
 
@@ -166,6 +169,31 @@ async def portfolioStockPercentage(name: str, email:str):
     for stock in portfolio:
         stock['percentage'] = round(((stock['quantity']* stock['buyPrice'])/total) * 100,2)
     return portfolio
+
+UPLOAD_DIR = "Server/static"
+os.makedirs(UPLOAD_DIR, exist_ok=True) 
+
+@router.post("/upload_image", tags=["IMAGE"])
+async def upload_image(file: UploadFile = File(...)):
+    """
+    Upload an image file, save it to the server, and return its accessible URL.
+    """
+    try:
+        # Generate a unique file name
+        file_extension = os.path.splitext(file.filename)[1]
+        unique_filename = f"{uuid.uuid4()}{file_extension}"
+        file_path = os.path.join(UPLOAD_DIR, unique_filename)
+        
+        # Save the uploaded file
+        with open(file_path, "wb") as f:
+            content = await file.read()
+            f.write(content)
+        
+        # Construct the accessible URL
+        file_url = f"http://labsad.onrender.com/Static/Static/{unique_filename}"
+        return {"file_url": file_url}
+    except Exception as e:
+        return {"error": str(e)}
 
 
 

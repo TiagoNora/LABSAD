@@ -8,6 +8,8 @@ WORKDIR /app
 
 COPY ./labsadmodels /app
 
+RUN poetry lock
+
 RUN poetry install
 
 EXPOSE 8000
