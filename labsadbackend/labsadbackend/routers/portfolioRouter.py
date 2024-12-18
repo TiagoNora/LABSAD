@@ -136,6 +136,22 @@ async def portfolioInfo(name: str, email:str):
     return result
     
     
+@router.get('/portfolioBenchmark', summary='Given a portfolio, benchmark it agaisnt other indexes')
+async def portfolioInfo(name: str, email:str, index: str):
+    repo = PortfolioRepo()
+    portfolio = repo.getPortfolio(name, email)
+    portfolio = portfolio['stocks']
+    start_date = min(stock['buyDate'] for stock in portfolio)
+    index = "^" + index
+    #print(index)
+    # Calculate performances
+    portfolio_perf, overall_return = calculate_portfolio_performance(portfolio)
+    benchmark_perf = benchmark_performance(index, start_date, datetime.now().strftime('%Y-%m-%d'))
+    
+    # Print results
+    print("Portfolio Performance:", portfolio_perf)
+    print("Overall Portfolio Return:", overall_return)
+    print(f"{index} Benchmark Return:", benchmark_perf)
 
 
 
@@ -143,6 +159,7 @@ async def portfolioInfo(name: str, email:str):
 
 
 
+    return get_plot_data_new(portfolio, index, start_date)
 
 
 
@@ -152,6 +169,108 @@ async def portfolioInfo(name: str, email:str):
 
 
 ######## Auxiliary functions
+
+
+def get_plot_data_new(portfolio, index, start_date):
+ 
+    data_return = []  # Initialize an empty list to store the data
+    
+    # Portfolio performance over time
+    for stock in portfolio:
+        symbol = stock['symbol']
+        buy_date = stock['buyDate']
+        
+        # Fetch stock prices
+        prices = fetch_data(symbol, buy_date, datetime.now().strftime('%Y-%m-%d'))
+        
+        # Normalize prices to start at 100
+        normalized_prices = prices / prices.iloc[0] * 100
+        
+        # Flatten y values if needed
+        y_flattened = normalized_prices.values.flatten().tolist()
+        
+        # Add the stock data to the data_return list
+        data_return.append({
+            "symbol": symbol,
+            "x": normalized_prices.index.tolist(),  # Dates as a list
+            "y": y_flattened  # Flattened list of performance values
+        })
+
+    # Benchmark performance over time
+    index_prices = fetch_data(index, start_date, datetime.now().strftime('%Y-%m-%d'))
+    
+    # Normalize index prices to start at 100
+    index_returns = index_prices / index_prices.iloc[0] * 100
+    
+    # Flatten y values if needed
+    y_flattened_index = index_returns.values.flatten().tolist()
+    
+    # Add the benchmark data to the data_return list
+    data_return.append({
+        "symbol": index,
+        "x": index_returns.index.tolist(),  # Dates as a list
+        "y": y_flattened_index  # Flattened list of performance values
+    })
+
+    return data_return
+
+
+
+
+def fetch_data(symbol, start_date, end_date):
+    """
+    Fetch historical price data for a given symbol from Yahoo Finance.
+    """
+    stock_data = yf.download(symbol, start=start_date, end=end_date)
+    return stock_data['Adj Close']
+
+def calculate_portfolio_performance(portfolio):
+    """
+    Calculate the portfolio performance based on current prices.
+    """
+    portfolio_performance = []
+    total_investment = 0
+    portfolio_value = 0
+
+    for stock in portfolio:
+        symbol = stock['symbol']
+        quantity = stock['quantity']
+        buy_price = stock['buyPrice']
+        buy_date = stock['buyDate']
+        buy_date = datetime.strptime(buy_date, '%Y-%m-%d')
+        end_date = datetime.now().strftime('%Y-%m-%d')
+
+        # Fetch historical data
+        prices = fetch_data(symbol, buy_date, end_date)
+        current_price = prices.iloc[-1]
+
+        # Calculate performance
+        investment = buy_price * quantity
+        current_value = current_price * quantity
+        return_percentage = ((current_price - buy_price) / buy_price) * 100
+
+        portfolio_performance.append({
+            'symbol': symbol,
+            'investment': investment,
+            'current_value': current_value,
+            'return_percentage': return_percentage
+        })
+
+        total_investment += investment
+        portfolio_value += current_value
+
+    overall_return = ((portfolio_value - total_investment) / total_investment) * 100
+
+    return portfolio_performance, overall_return
+
+def benchmark_performance(index, start_date, end_date):
+    """
+    Calculate benchmark performance over the same period.
+    """
+    index_data = fetch_data(index, start_date, end_date)
+    start_price = index_data.iloc[0]
+    end_price = index_data.iloc[-1]
+    return ((end_price - start_price) / start_price) * 100
 
 
 
