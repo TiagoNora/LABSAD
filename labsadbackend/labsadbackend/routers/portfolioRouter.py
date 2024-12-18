@@ -219,13 +219,13 @@ async def portfolioBacktesting(stock_list_str: str, weight_list_str: str):
     url = "https://labsad.onrender.com/portfolio/upload_image"  # Replace with your FastAPI server URL
     #print(file_image)
     with open(file_image, 'rb') as f:
-        files = {'file': file_image}  # Change MIME type if necessary
+        files = {'file': f}  # Change MIME type if necessary
         print(files)
         
         response = requests.post(url, files=files)
         print(response.text)
     
-        return response.text
+        return response.json()
 
     return None
 
