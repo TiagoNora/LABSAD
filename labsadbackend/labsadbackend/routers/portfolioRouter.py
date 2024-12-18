@@ -214,8 +214,9 @@ async def portfolioBacktesting(stock_list_str: str, weight_list_str: str):
 
     
     url = "https://labsad.onrender.com/" + file_image  # Replace with your FastAPI server URL
+    total_returns = (full_portfolio_prices['Ptf Value'][-1] / full_portfolio_prices['Ptf Value'][0])-1
 
-    return url
+    return {'Image': url, 'total_returns': total_returns}
 
 ######## Auxiliary functions
 
