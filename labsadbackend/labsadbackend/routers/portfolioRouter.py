@@ -176,7 +176,7 @@ async def portfolioStockPercentage(name: str, email:str):
 UPLOAD_DIR = "Server/static"
 os.makedirs(UPLOAD_DIR, exist_ok=True) 
 
-@router.post("/upload_image", tags=["IMAGE"])
+@router.post("/upload_image")
 async def upload_image(file: UploadFile = File(...)):
     """
     Upload an image file, save it to the server, and return its accessible URL.
@@ -193,7 +193,7 @@ async def upload_image(file: UploadFile = File(...)):
             f.write(content)
         
         # Construct the accessible URL
-        file_url = f"http://labsad.onrender.com/Static/Static/{unique_filename}"
+        file_url = f"http://labsad.onrender.com/Static/static/{unique_filename}"
         return {"file_url": file_url}
     except Exception as e:
         return {"error": str(e)}
