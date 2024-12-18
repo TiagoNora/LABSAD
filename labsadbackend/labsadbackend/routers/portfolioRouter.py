@@ -153,13 +153,19 @@ async def portfolioInfo(name: str, email:str, index: str):
     print("Overall Portfolio Return:", overall_return)
     print(f"{index} Benchmark Return:", benchmark_perf)
 
-
-
-
-
-
-
     return get_plot_data_new(portfolio, index, start_date)
+
+@router.get('/portfolioStockPercentage', summary='Given a portfolio, return the percentage of each stock')
+async def portfolioStockPercentage(name: str, email:str):
+    repo = PortfolioRepo()
+    portfolio = repo.getPortfolio(name, email)
+    portfolio = portfolio['stocks']
+    total = 0
+    for stock in portfolio:
+        total += stock['quantity'] * stock['buyPrice']
+    for stock in portfolio:
+        stock['percentage'] = round(((stock['quantity']* stock['buyPrice'])/total) * 100,2)
+    return portfolio
 
 
 
