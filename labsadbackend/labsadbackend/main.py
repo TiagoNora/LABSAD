@@ -25,7 +25,7 @@ app.add_middleware(GZipMiddleware, minimum_size=1000)
 app.include_router(tickersRouter.router)
 app.include_router(portfolioRouter.router)
 
-app.mount("/server", StaticFiles(directory="server"), name = "static")
+app.mount("/files", StaticFiles(directory="server"), name = "static")
 
 def start():
     uvicorn.run("labsadbackend.main:app", host="0.0.0.0", port=8000, workers=4, reload=True, log_level="info")
