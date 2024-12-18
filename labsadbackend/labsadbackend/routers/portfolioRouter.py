@@ -86,6 +86,42 @@ async def optimizePortfolioMinRisk(name: str, email: str):
     # print(tickerList)
     return optimize_min_risk(tickerList)
     
+@router.get('portfolioInfo', summary='Given a portfolio, return stats and info on it')
+async def portfolioInfo(name: str, email:str):
+    repo = PortfolioRepo()
+    portfolio = repo.getPortfolio(name, email)
+    portfolio = portfolio['stocks']
+    # Fetch sector classifications
+    sectors = fetch_sector_classification(portfolio)
+    print("Sector Classification:", sectors)
+
+    # Fetch current prices
+    current_prices = fetch_current_prices(portfolio)
+    print("Current Prices:", current_prices)
+
+    # Calculate portfolio stats
+    total_value, sector_allocations = calculate_portfolio_stats(portfolio, current_prices, sectors)
+
+    # Calculate portfolio returns
+    portfolio_return = calculate_returns(portfolio, current_prices)
+
+    sector_string = sector_allocations_to_string(sector_allocations)
+
+
+    # # Display results
+    # print(f"Portfolio Total Value: ${total_value:.2f}")
+    # print(f"Sector Allocations: {sector_allocations}")
+    # print(f"Portfolio Return: {portfolio_return:.2f}%")
+
+    # Convert dictionaries to lists of tuples
+    current_prices = dict_to_list_of_dicts(current_prices, 'current_price')
+    sectors = dict_to_list_of_dicts(sectors, 'sector')
+
+    result = {'returns':portfolio_return, 'sector_allocation':sector_string, 'total_value':total_value, 'current_prices':current_prices, 'sectors':sectors   }
+
+    print(result)
+    return result
+    
     
 
 
@@ -103,6 +139,75 @@ async def optimizePortfolioMinRisk(name: str, email: str):
 
 
 ######## Auxiliary functions
+
+
+
+# Function to transform sector allocation dictionary to the string format
+def sector_allocations_to_string(sector_allocations):
+    # Convert the dictionary to a list of strings in "sector:number" format
+    sector_string = ','.join([f"{sector}:{allocation:.2f}" for sector, allocation in sector_allocations.items()])
+    return sector_string
+
+def dict_to_list_of_dicts(dictionary, value_key):
+    return [{'symbol': key, value_key: value} for key, value in dictionary.items()]
+
+
+# Function to fetch sector classifications
+def fetch_sector_classification(portfolio):
+    sector_classification = {}
+    for stock in portfolio:
+        symbol = stock['symbol']
+        try:
+            ticker_info = yf.Ticker(symbol).info  # Retrieve stock info
+            sector = ticker_info.get('sector', 'Unknown')  # Fetch sector
+            sector_classification[symbol] = sector
+        except Exception as e:
+            print(f"Error fetching data for {symbol}: {e}")
+            sector_classification[symbol] = 'Unknown'
+    return sector_classification
+
+# Fetch current stock data
+def fetch_current_prices(portfolio):
+    prices = {}
+    for stock in portfolio:
+        symbol = stock['symbol']
+        try:
+            data = yf.Ticker(symbol).history(period="1d")  # Get latest price
+            current_price = data['Close'].iloc[-1]  # Close price
+            prices[symbol] = current_price
+        except Exception as e:
+            print(f"Error fetching price for {symbol}: {e}")
+            prices[symbol] = 0
+    return prices
+
+# Calculate portfolio value and sector allocation
+def calculate_portfolio_stats(portfolio, prices, sectors):
+    total_value = 0
+    sector_values = {}
+
+    for stock in portfolio:
+        symbol = stock['symbol']
+        quantity = stock['quantity']
+        current_price = prices[symbol]
+        stock_value = quantity * current_price
+
+        # Update total and sector values
+        total_value += stock_value
+        sector = sectors.get(symbol, 'Unknown')
+        if sector not in sector_values:
+            sector_values[sector] = 0
+        sector_values[sector] += stock_value
+
+    # Calculate sector allocations
+    sector_allocations = {sector: (value / total_value) * 100 for sector, value in sector_values.items()}
+    return total_value, sector_allocations
+
+# Calculate portfolio returns
+def calculate_returns(portfolio, prices):
+    total_cost = sum(stock['quantity'] * stock['buyPrice'] for stock in portfolio)
+    current_value = sum(stock['quantity'] * prices[stock['symbol']] for stock in portfolio)
+    return ((current_value - total_cost) / total_cost) * 100
+
 
 def optimize_stock_list(tickerList):
     end_date = datetime.today()
