@@ -173,14 +173,11 @@ async def portfolioStockPercentage(name: str, email:str):
         stock['percentage'] = round(((stock['quantity']* stock['buyPrice'])/total) * 100,2)
     return portfolio
 
-UPLOAD_DIR = "Server/static"
+"""UPLOAD_DIR = "Server/static"
 os.makedirs(UPLOAD_DIR, exist_ok=True) 
 
 @router.post("/upload_image")
 async def upload_image(file: UploadFile = File(...)):
-    """
-    Upload an image file, save it to the server, and return its accessible URL.
-    """
     try:
         # Generate a unique file name
         file_extension = os.path.splitext(file.filename)[1]
@@ -197,7 +194,7 @@ async def upload_image(file: UploadFile = File(...)):
         return {"file_url": file_url}
     except Exception as e:
         return {"error": str(e)}
-
+"""
 
 
 @router.get('/portfolioBacktesting', summary='Given a portfolio, benchmark it agaisnt other indexes')
@@ -224,6 +221,7 @@ async def portfolioBacktesting(stock_list_str: str, weight_list_str: str):
 
 
 def portfolio_value_evaluation(stock_names, weights, start_date, end_date):
+    UPLOAD_DIR = "assets/images"
     if np.sum(weights) != 1:
         print("Sum")
     
@@ -253,7 +251,7 @@ def portfolio_value_evaluation(stock_names, weights, start_date, end_date):
     plt.xlabel("Date")
     plt.ylabel("Price (Normalized)")
 
-    output_dir = 'server/static'
+    output_dir = 'assets/images'
 
     # Add a legend
     plt.legend()
