@@ -262,24 +262,25 @@ def portfolio_value_evaluation(stock_names, weights, start_date, end_date):
     plt.xlabel("Date")
     plt.ylabel("Price (Normalized)")
 
-    output_dir = 'temp_images'
+    output_dir = 'Server/static'
 
     # Add a legend
     plt.legend()
 
     # Ensure the output directory exists
     os.makedirs(output_dir, exist_ok=True)
+    unique_filename = f"{uuid.uuid4()}" + ".png"
     
     # Define the file path for saving the image (e.g., PNG format)
-    file_image = os.path.join(output_dir, "portfolio_value_plot.png")
+    file_path = os.path.join(UPLOAD_DIR, unique_filename)
 
     # Save the figure as a PNG image
-    plt.savefig(file_image)
+    plt.savefig(file_path)
 
     # Close the plot to avoid display (if you're in a script and don't want to show it)
     plt.close()
 
-    return stock_prices, file_image
+    return stock_prices, file_path
 
 
 def get_plot_data_new(portfolio, index, start_date):
