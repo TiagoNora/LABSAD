@@ -160,6 +160,7 @@ async def getTickerDataFromDate(symbol: str, date: str):
 async def getTickerInfo(symbol: str):
     ticker = yf.Ticker(symbol)
     info = ticker.info
+    info["companyOfficers"] = info.get("companyOfficers", [])[:3]
     return info
 
 @router.get('/getNews', summary="Get ticker news")
@@ -181,7 +182,7 @@ async def getTickerInstitutionalHolders(symbol: str):
     ticker = yf.Ticker(symbol)
     institutional_holders = ticker.institutional_holders
     institutional_holders = institutional_holders.reset_index()
-    institutional_holders_dict = institutional_holders.to_dict(orient='records')
+    institutional_holders_dict = institutional_holders.head(5).to_dict(orient='records')
     return institutional_holders_dict
 
 @router.get('/searchPortfolio', summary="Search for a ticker for portfolio")
