@@ -193,7 +193,7 @@ async def upload_image(file: UploadFile = File(...)):
             f.write(content)
         
         # Construct the accessible URL
-        file_url = f"http://labsad.onrender.com/Static/Static/{unique_filename}.png"
+        file_url = f"http://labsad.onrender.com/Static/Static/{unique_filename}"
         return {"file_url": file_url}
     except Exception as e:
         return {"error": str(e)}
