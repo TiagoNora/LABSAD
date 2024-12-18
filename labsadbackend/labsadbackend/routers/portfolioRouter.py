@@ -225,9 +225,9 @@ async def portfolioBacktesting(stock_list_str: str, weight_list_str: str):
         response = requests.post(url, files=files)
         print(response.text)
     
-    return "olá"
+        return response.text
 
-
+    return None
 
 ######## Auxiliary functions
 
