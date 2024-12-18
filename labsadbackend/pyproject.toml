@@ -21,6 +21,7 @@ fredapi = "^0.5.2"
 scipy = "^1.14.1"
 python-multipart = "^0.0.20"
 plotly = "^5.24.1"
+matplotlib = "^3.10.0"
 
 
 

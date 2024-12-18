@@ -12,8 +12,8 @@ from fastapi.staticfiles import StaticFiles
 import base64
 import uuid
 import os
-import plotly.express as px
-
+import matplotlib.pyplot as plt
+import requests
 
 
 router = APIRouter(prefix='/portfolio', tags=['PORTFOLIO'])
@@ -193,7 +193,7 @@ async def upload_image(file: UploadFile = File(...)):
             f.write(content)
         
         # Construct the accessible URL
-        file_url = f"http://labsad.onrender.com/Static/Static/{unique_filename}"
+        file_url = f"http://labsad.onrender.com/Static/Static/{unique_filename}.png"
         return {"file_url": file_url}
     except Exception as e:
         return {"error": str(e)}
@@ -215,8 +215,17 @@ async def portfolioBacktesting(stock_list_str: str, weight_list_str: str):
     total_return = (full_portfolio_prices['Ptf Value'][-1] / full_portfolio_prices['Ptf Value'][0])-1
     print("Total portfolio return:", f"{total_return:.2%}")
 
-
-    return upload_image(file_image)
+    
+    url = "https://labsad.onrender.com/portfolio/upload_image"  # Replace with your FastAPI server URL
+    #print(file_image)
+    with open(file_image, 'rb') as f:
+        files = {'file': file_image}  # Change MIME type if necessary
+        print(files)
+        
+        response = requests.post(url, files=files)
+        print(response.text)
+    
+    return "olá"
 
 
 
@@ -238,9 +247,25 @@ def portfolio_value_evaluation(stock_names, weights, start_date, end_date):
     weighted_stock_prices = stock_prices * weights
     stock_prices.loc[:, 'Ptf Value'] = weighted_stock_prices.sum(1)
 
-    # Create the plot
-    fig = px.line(stock_prices, title="Portfolio Value Over Time")
+    # Create the plot using matplotlib
+    plt.figure(figsize=(10, 6))
+
+    # Plot each stock's price and the portfolio value
+    for stock in stock_names:
+        plt.plot(stock_prices.index, stock_prices[stock], label=stock)
+
+    # Plot the portfolio value
+    plt.plot(stock_prices.index, stock_prices['Ptf Value'], label='Portfolio Value', linewidth=2, color='black')
+
+    # Add title and labels
+    plt.title("Portfolio Value Over Time")
+    plt.xlabel("Date")
+    plt.ylabel("Price (Normalized)")
+
     output_dir = 'temp_images'
+
+    # Add a legend
+    plt.legend()
 
     # Ensure the output directory exists
     os.makedirs(output_dir, exist_ok=True)
@@ -249,9 +274,11 @@ def portfolio_value_evaluation(stock_names, weights, start_date, end_date):
     file_image = os.path.join(output_dir, "portfolio_value_plot.png")
 
     # Save the figure as a PNG image
-    fig.write_image(file_image)
+    plt.savefig(file_image)
 
-    # Return the stock prices DataFrame and the file path to the image
+    # Close the plot to avoid display (if you're in a script and don't want to show it)
+    plt.close()
+
     return stock_prices, file_image
 
 
