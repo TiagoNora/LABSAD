@@ -137,7 +137,7 @@ async def portfolioInfo(name: str, email:str):
     
     
 @router.get('/portfolioBenchmark', summary='Given a portfolio, benchmark it agaisnt other indexes')
-async def portfolioInfo(name: str, email:str, index: str):
+async def portfolioBenchmark(name: str, email:str, index: str):
     repo = PortfolioRepo()
     portfolio = repo.getPortfolio(name, email)
     portfolio = portfolio['stocks']
@@ -163,12 +163,45 @@ async def portfolioInfo(name: str, email:str, index: str):
 
 
 
+@router.get('/portfolioBacktesting', summary='Given a portfolio, benchmark it agaisnt other indexes')
+async def portfolioBacktesting(stock_list_str: str, weight_list_str: str):
+
+    stock_list = [s.strip() for s in stock_list_str.split(',')]
+    weight_list = [float(s) for s in weight_list_str.split(',')]
+    # print(stock_list)
+    # print(weight_list)
+    end_date = datetime.today()
+    n_years = 5
+    start_date = end_date - timedelta(days = n_years * 365)
+
+    full_portfolio_prices = portfolio_value_evaluation(stock_list, weight_list, start_date, end_date)
+    total_return = (full_portfolio_prices['Ptf Value'][-1] / full_portfolio_prices['Ptf Value'][0])-1
+    print("Total portfolio return:", f"{total_return:.2%}")
 
 
-
-
-
+    return None
 ######## Auxiliary functions
+
+
+def portfolio_value_evaluation(stock_names, weights, start_date, end_date):
+    if np.sum(weights) != 1:
+        print("Sum")
+    
+    stock_data = yf.download(
+        tickers = stock_names, 
+        start = start_date,
+        end = end_date)
+    
+
+    stock_prices = stock_data['Adj Close']
+
+    weighted_stock_prices = stock_prices * weights
+    stock_prices.loc[:, 'Ptf Value'] = weighted_stock_prices.sum(1)
+
+    # fig = px.line(stock_prices)
+    # fig.show()
+
+    return stock_prices
 
 
 def get_plot_data_new(portfolio, index, start_date):
