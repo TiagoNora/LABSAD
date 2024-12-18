@@ -209,12 +209,12 @@ async def portfolioBacktesting(stock_list_str: str, weight_list_str: str):
     start_date = end_date - timedelta(days = n_years * 365)
 
     full_portfolio_prices, file_image = portfolio_value_evaluation(stock_list, weight_list, start_date, end_date)
-    total_return = (full_portfolio_prices['Ptf Value'][-1] / full_portfolio_prices['Ptf Value'][0])-1
-    print("Total portfolio return:", f"{total_return:.2%}")
+    total_returns = (full_portfolio_prices['Ptf Value'][-1] / full_portfolio_prices['Ptf Value'][0])-1
+    print("Total portfolio return:", f"{total_returns:.2%}")
 
     
     url = "https://labsad.onrender.com/" + file_image  # Replace with your FastAPI server URL
-    total_returns = (full_portfolio_prices['Ptf Value'][-1] / full_portfolio_prices['Ptf Value'][0])-1
+    
 
     return {'Image': url, 'total_returns': total_returns}
 
