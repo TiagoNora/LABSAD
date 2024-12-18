@@ -253,7 +253,7 @@ def portfolio_value_evaluation(stock_names, weights, start_date, end_date):
     plt.xlabel("Date")
     plt.ylabel("Price (Normalized)")
 
-    output_dir = 'Server/static'
+    output_dir = 'server/static'
 
     # Add a legend
     plt.legend()
