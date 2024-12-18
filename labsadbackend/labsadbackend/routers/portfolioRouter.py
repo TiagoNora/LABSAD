@@ -12,6 +12,9 @@ from fastapi.staticfiles import StaticFiles
 import base64
 import uuid
 import os
+import plotly.express as px
+
+
 
 router = APIRouter(prefix='/portfolio', tags=['PORTFOLIO'])
 
@@ -208,12 +211,15 @@ async def portfolioBacktesting(stock_list_str: str, weight_list_str: str):
     n_years = 5
     start_date = end_date - timedelta(days = n_years * 365)
 
-    full_portfolio_prices = portfolio_value_evaluation(stock_list, weight_list, start_date, end_date)
+    full_portfolio_prices, file_image = portfolio_value_evaluation(stock_list, weight_list, start_date, end_date)
     total_return = (full_portfolio_prices['Ptf Value'][-1] / full_portfolio_prices['Ptf Value'][0])-1
     print("Total portfolio return:", f"{total_return:.2%}")
 
 
-    return None
+    return upload_image(file_image)
+
+
+
 ######## Auxiliary functions
 
 
@@ -232,10 +238,21 @@ def portfolio_value_evaluation(stock_names, weights, start_date, end_date):
     weighted_stock_prices = stock_prices * weights
     stock_prices.loc[:, 'Ptf Value'] = weighted_stock_prices.sum(1)
 
-    # fig = px.line(stock_prices)
-    # fig.show()
+    # Create the plot
+    fig = px.line(stock_prices, title="Portfolio Value Over Time")
+    output_dir = 'temp_images'
 
-    return stock_prices
+    # Ensure the output directory exists
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Define the file path for saving the image (e.g., PNG format)
+    file_image = os.path.join(output_dir, "portfolio_value_plot.png")
+
+    # Save the figure as a PNG image
+    fig.write_image(file_image)
+
+    # Return the stock prices DataFrame and the file path to the image
+    return stock_prices, file_image
 
 
 def get_plot_data_new(portfolio, index, start_date):
