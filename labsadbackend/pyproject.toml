@@ -19,6 +19,7 @@ redis = "^5.2.0"
 setuptools = "^75.5.0"
 fredapi = "^0.5.2"
 scipy = "^1.14.1"
+python-multipart = "^0.0.20"
 
 
 
