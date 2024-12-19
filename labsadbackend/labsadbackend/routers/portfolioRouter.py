@@ -243,6 +243,17 @@ async def recommendStocks(name: str, email: str):
     return recommendations
 
 
+@router.get('PortfolioStockRecommendationbySector', summary="For a specific sector, recommend a stock")
+async def recommendStocksBySector(name: str, email: str):
+    repo = PortfolioRepo()
+    portfolio = repo.getPortfolio(name, email)
+    tickerList = []
+    for t in portfolio['stocks']:
+        tickerList.append(t['symbol'])
+
+
+
+
 ######## Auxiliary functions
 
 def get_user_sectors(ticker_list):
@@ -312,8 +323,9 @@ def recommend_stocks_from_new_sectors(user_tickers):
     for sector in uninvested_sectors:
         # Get high-growth stocks in this sector
         recommendations['sector'] = sector
-        recommendations['stocks'] = get_high_growth_stocks(sector)
+        recommendations[f'stocks'] = get_high_growth_stocks(sector)
         recommendations_list.append(recommendations)
+        recommendations = {}
 
 
     return recommendations_list
