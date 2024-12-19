@@ -8,7 +8,8 @@ import json
 from labsadbackend.repo import *
 import functools
 from pymongo import MongoClient
-
+import matplotlib.pyplot as plt
+import uuid
 
 
 router = APIRouter(prefix='/tickers', tags=['TICKERS'])
@@ -224,3 +225,130 @@ async def getForecasts7Days(symbol: str):
     
 
 
+@router.get('/getForecastsImage', summary="Obtain 7 days of forecasts for a given company")
+async def getForecasts7DaysAfterBefore(symbol: str):
+    uri = 'mongodb://mongoadmin:a79c987b4dce244e9bc21620@vsgate-s1.dei.isep.ipp.pt:10777'
+    db_name = 'labsad'
+    save_path = 'assets/images'
+
+    # Initialize MongoDB client
+    client = MongoClient(uri)
+    db = client[db_name]
+
+    
+    # Fetch forecasted data
+    stocks_forecast = 'stocksForecasts'
+    stocks_forecasts_collection = db[stocks_forecast]
+    document = stocks_forecasts_collection.find_one({"symbol": symbol})
+
+    if not document or "predictions" not in document:
+        raise ValueError(f"No forecasts found for symbol: {symbol}")
+
+    predictions = document["predictions"]
+
+    # Fetch actuals from Yahoo Finance
+    actuals = fetch_actuals_from_yahoo(symbol)
+
+    print(symbol)
+    print(actuals)
+    print(predictions)
+    print(save_path)
+
+    # Plot
+    file_image =  plot_forecast_with_actuals(symbol, actuals, predictions, save_path)
+
+    url = "https://labsad.onrender.com/" + file_image  # Replace with your FastAPI server URL
+
+
+    return {'Image': url}
+
+     
+
+
+
+
+
+##### functions
+
+
+
+
+def plot_forecast_with_actuals(symbol, actuals, predictions, save_path):
+    """
+    Plots the last 7 actual values and forecasted values for a stock symbol.
+
+    Parameters:
+    - symbol: str, stock symbol.
+    - actuals: list, last 7 actual values.
+    - predictions: list, forecasted values.
+    - save_path: str, path to save the plot.
+    """
+    if len(actuals) != 7:
+        raise ValueError("The actuals list must contain exactly 7 values.")
+
+    plt.figure(figsize=(10, 6))
+    print('hello')
+    # Plot actuals
+    days = [f"Day-{i}" for i in range(7, 0, -1)]
+    plt.plot(days, actuals, marker='o', label='Last 7 Actuals', color='blue')
+
+    print(predictions)
+    # Plot forecasts
+    prediction_values = [p['prediction'] for p in predictions]
+    prediction_dates = [p['date'] for p in predictions]
+    plt.plot(prediction_dates, prediction_values, marker='o', label='Forecasts', color='orange')
+
+    print('ola')
+
+    # Adding labels and title
+    plt.xlabel('Days')
+    plt.ylabel('Stock Value')
+    plt.title(f'{symbol} Actuals vs Forecasts')
+    plt.grid(True)
+    plt.legend()
+
+    # Save plot
+    plt.tight_layout()
+
+    # Ensure the output directory exists
+    os.makedirs(save_path, exist_ok=True)
+    unique_filename = f"{uuid.uuid4()}" + ".png"
+    
+    # Define the file path for saving the image (e.g., PNG format)
+    file_path = os.path.join(save_path, unique_filename)
+
+
+    plt.savefig(save_path)
+    #plt.close()
+
+    return file_path
+
+def fetch_actuals_from_yahoo(symbol):
+    """
+    Fetches the last 7 actual values for a stock symbol from Yahoo Finance.
+
+    Parameters:
+    - symbol: str, stock symbol.
+
+    Returns:
+    - list, last 7 actual values.
+    """
+    try:
+        # Create a Ticker object
+        ticker = yf.Ticker(symbol)
+
+        # Fetch historical data for the last month
+        data = ticker.history(period="1mo", interval="1d")
+
+        if data.empty:
+            raise ValueError(f"No data found for symbol: {symbol}")
+
+        # Get the 'Close' prices for the most recent 7 days
+        actuals = data['Close'].tail(7).tolist()
+        return actuals
+    except Exception as e:
+        raise ValueError(f"Error fetching data from Yahoo Finance for symbol {symbol}: {e}")
+
+
+
+    
