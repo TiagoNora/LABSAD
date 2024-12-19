@@ -224,9 +224,95 @@ async def portfolioBacktesting(stock_list_str: str, weight_list_str: str):
     url = "https://labsad.onrender.com/" + file_image  # Replace with your FastAPI server URL
     
 
-    return {'Image': url, 'total_returns': total_returns}
+    return {'Image': url, 'total_returns': total_returns*100}
+
+
+
+@router.get('/portfolioStockRecommendation', summary='Given a portfolio, recommend stocks of unrepresented sectors')
+async def recommendStocks(name: str, email: str):
+    repo = PortfolioRepo()
+    portfolio = repo.getPortfolio(name, email)
+    tickerList = []
+    for t in portfolio['stocks']:
+        tickerList.append(t['symbol'])
+
+
+    result = []
+    recommendations = recommend_stocks_from_new_sectors(tickerList)
+    result.append(recommendations)
+    return result
+
 
 ######## Auxiliary functions
+
+def get_user_sectors(ticker_list):
+    """Fetch the sectors of user's stocks."""
+    sectors = set()
+    for ticker in ticker_list:
+        stock = yf.Ticker(ticker)
+        try:
+            info = stock.info
+            sectors.add(info.get('sector', 'Unknown'))
+        except KeyError:
+            # If sector info is missing, skip that stock
+            continue
+    return sectors
+
+def get_all_sectors():
+    """Predefined list of sectors, we may expand it later based on available data."""
+    return {
+        "Technology", "Healthcare", "Financials", "Energy", 
+        "Consumer Discretionary", "Consumer Staples", "Industrials",
+        "Materials", "Utilities", "Real Estate", "Communication Services"
+    }
+
+def get_high_growth_stocks(sector):
+    """Find high-growth stocks in the given sector by checking relevant data."""
+    # Example of high-growth criteria: Fast revenue growth, earnings growth, etc.
+    growth_stocks = []
+    
+    # This part will simulate getting top stocks in that sector
+    # For now, let's manually define a few popular high-growth stocks for sectors
+    
+    if sector == "Technology":
+        growth_stocks = ["NVDA", "AMD", "MSFT", "GOOGL", "AAPL"]
+    elif sector == "Healthcare":
+        growth_stocks = ["BIIB", "REGN", "VRTX", "PFE", "JNJ"]
+    elif sector == "Financials":
+        growth_stocks = ["JPM", "GS", "MS", "C", "WFC"]
+    elif sector == "Energy":
+        growth_stocks = ["XOM", "CVX", "SLB", "COP", "ENB"]
+    elif sector == "Consumer Discretionary":
+        growth_stocks = ["TSLA", "AMZN", "HD", "NKE", "MCD"]
+    elif sector == "Consumer Staples":
+        growth_stocks = ["PG", "KO", "PEP", "CL", "MO"]
+    elif sector == "Industrials":
+        growth_stocks = ["CAT", "BA", "UPS", "DE", "CSX"]
+    elif sector == "Materials":
+        growth_stocks = ["LIN", "APD", "ECL", "DD", "LQD"]
+    elif sector == "Utilities":
+        growth_stocks = ["NEE", "DUK", "SO", "XEL", "AWK"]
+    elif sector == "Real Estate":
+        growth_stocks = ["PLD", "SPG", "AMT", "EQIX", "O"]
+    elif sector == "Communication Services":
+        growth_stocks = ["DIS", "T", "VZ", "TMUS", "NFLX"]
+    
+    return growth_stocks
+
+def recommend_stocks_from_new_sectors(user_tickers):
+    """Recommend high-growth stocks from sectors the user hasn't invested in."""
+    user_sectors = get_user_sectors(user_tickers)
+    all_sectors = get_all_sectors()
+    uninvested_sectors = all_sectors - user_sectors
+
+    recommendations = {}
+    for sector in uninvested_sectors:
+        # Get high-growth stocks in this sector
+        recommendations[sector] = get_high_growth_stocks(sector)
+    
+    return recommendations
+
+
 
 
 def plot_comparison(portfolio, index, start_date):
@@ -282,6 +368,7 @@ def portfolio_value_evaluation(stock_names, weights, start_date, end_date):
         start = start_date,
         end = end_date)
     
+    #print(weights)
 
     stock_prices = stock_data['Adj Close']
 
