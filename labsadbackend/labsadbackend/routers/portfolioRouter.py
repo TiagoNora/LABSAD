@@ -244,6 +244,37 @@ async def recommendStocks(name: str, email: str):
     return recommendations
 
 
+@router.get('/portfolioStockRecommendationSectorUser', summary='Given a sector, provide stock recommendations for the user')
+async def recommendStocksBySectorForUser(sector: str):
+
+    growth_stocks = []
+
+    if sector == "Technology":
+        growth_stocks = ["NVDA", "AMD", "MSFT", "GOOGL", "AAPL"]
+    elif sector == "Healthcare":
+        growth_stocks = ["BIIB", "REGN", "VRTX", "PFE", "JNJ"]
+    elif sector == "Financials":
+        growth_stocks = ["JPM", "GS", "MS", "C", "WFC"]
+    elif sector == "Energy":
+        growth_stocks = ["XOM", "CVX", "SLB", "COP", "ENB"]
+    elif sector == "Consumer Discretionary":
+        growth_stocks = ["TSLA", "AMZN", "HD", "NKE", "MCD"]
+    elif sector == "Consumer Staples":
+        growth_stocks = ["PG", "KO", "PEP", "CL", "MO"]
+    elif sector == "Industrials":
+        growth_stocks = ["CAT", "BA", "UPS", "DE", "CSX"]
+    elif sector == "Materials":
+        growth_stocks = ["LIN", "APD", "ECL", "DD", "LQD"]
+    elif sector == "Utilities":
+        growth_stocks = ["NEE", "DUK", "SO", "XEL", "AWK"]
+    elif sector == "Real Estate":
+        growth_stocks = ["PLD", "SPG", "AMT", "EQIX", "O"]
+    elif sector == "Communication Services":
+        growth_stocks = ["DIS", "T", "VZ", "TMUS", "NFLX"]
+    
+    return growth_stocks
+
+
 @router.get('/PortfolioStockRecommendationbySector', summary="For a specific sector, recommend a stock")
 async def recommendStocksBySector(name: str, email: str):
     repo = PortfolioRepo()
