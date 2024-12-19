@@ -159,7 +159,15 @@ async def portfolioBenchmark(name: str, email:str, index: str):
     print("Overall Portfolio Return:", overall_return)
     print(f"{index} Benchmark Return:", benchmark_perf)
 
-    return get_plot_data_new(portfolio, index, start_date)
+    file_image = plot_comparison(portfolio, index, start_date)
+
+    print(file_image)
+
+    url = "https://labsad.onrender.com/" + file_image  # Replace with your FastAPI server URL
+    
+
+    return {'Image': url}
+
 
 @router.get('/portfolioStockPercentage', summary='Given a portfolio, return the percentage of each stock')
 async def portfolioStockPercentage(name: str, email:str):
@@ -219,6 +227,49 @@ async def portfolioBacktesting(stock_list_str: str, weight_list_str: str):
     return {'Image': url, 'total_returns': total_returns}
 
 ######## Auxiliary functions
+
+
+def plot_comparison(portfolio, index, start_date):
+    """
+    Visualize portfolio vs benchmark performance.
+    """
+
+    UPLOAD_DIR = "assets/images"
+    if not os.path.exists(UPLOAD_DIR):
+        os.makedirs(UPLOAD_DIR)  # Ensure the directory exists
+
+    unique_filename = f"{uuid.uuid4()}" + ".png"
+    output_file = os.path.join(UPLOAD_DIR, unique_filename)
+
+    plt.figure(figsize=(10, 6))
+
+    # Portfolio performance over time
+    for stock in portfolio:
+        prices = fetch_data(stock['symbol'], stock['buyDate'], datetime.now().strftime('%Y-%m-%d'))
+        plt.plot(prices.index, prices / prices.iloc[0] * 100, label=f"{stock['symbol']} (Portfolio)")
+
+    # Benchmark performance over time
+    index_prices = fetch_data(index, start_date, datetime.now().strftime('%Y-%m-%d'))
+    plt.plot(index_prices.index, index_prices / index_prices.iloc[0] * 100, label=f"{index} (Benchmark)", linestyle='--')
+
+    plt.title("Portfolio vs Benchmark Performance")
+    plt.xlabel("Date")
+    plt.ylabel("Normalized Price (%)")
+    plt.legend()
+    plt.grid()
+
+    unique_filename = f"{uuid.uuid4()}" + ".png"
+    
+    # Define the file path for saving the image (e.g., PNG format)
+    
+
+    # Save the plot to a file
+    plt.savefig(output_file, dpi=300, bbox_inches='tight')
+    print(f"Plot saved to {output_file}")
+
+   # plt.show()
+
+    return output_file
 
 
 def portfolio_value_evaluation(stock_names, weights, start_date, end_date):
