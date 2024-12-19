@@ -14,6 +14,7 @@ import uuid
 import os
 import matplotlib.pyplot as plt
 import requests
+import random
 
 
 router = APIRouter(prefix='/portfolio', tags=['PORTFOLIO'])
@@ -247,14 +248,68 @@ async def recommendStocks(name: str, email: str):
 async def recommendStocksBySector(name: str, email: str):
     repo = PortfolioRepo()
     portfolio = repo.getPortfolio(name, email)
-    tickerList = []
-    for t in portfolio['stocks']:
-        tickerList.append(t['symbol'])
+    existing_tickers = {t['symbol'] for t in portfolio['stocks']}
+
+    # Fetch stock data dynamically
+    try:
+        stocks = fetch_stock_data()
+    except Exception as e:
+        return {"error": f"Unable to fetch stocks: {str(e)}"}
+
+    # Filter out stocks already in the user's portfolio
+    available_stocks = [
+        {
+            "symbol": stock["symbol"],
+            "name": stock.get("description", "No name available"),
+            "sector": stock.get("sector", "No sector information"),
+        }
+        for stock in stocks
+        if stock["symbol"] not in existing_tickers
+    ]
+
+    if not available_stocks:
+        return {"error": "No new stocks to recommend at the moment."}
+
+    # Randomly select a stock to recommend
+    recommended_stock = random.choice(available_stocks)
+
+    # Fetch additional details about the recommended stock
+    try:
+        details = fetch_stock_details(recommended_stock["symbol"])
+        recommended_stock["current_price"] = details.get("c", "N/A")  # Current price
+        recommended_stock["day_high"] = details.get("h", "N/A")  # Day high
+        recommended_stock["day_low"] = details.get("l", "N/A")  # Day low
+    except Exception as e:
+        recommended_stock["details_error"] = f"Failed to fetch additional details: {str(e)}"
+
+    return recommended_stock
 
 
 
 
 ######## Auxiliary functions
+
+API_KEY = "cti2qn9r01qm6mum0010cti2qn9r01qm6mum001g"  # Replace with your API key
+BASE_URL = "https://finnhub.io/api/v1/"
+
+def fetch_stock_data():
+    """Fetches a list of interesting stocks dynamically from an API."""
+    url = f"{BASE_URL}stock/symbol?exchange=US&token={API_KEY}"
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        raise Exception(f"Failed to fetch stock data. HTTP {response.status_code}: {response.text}")
+
+def fetch_stock_details(symbol):
+    """Fetches detailed information for a specific stock."""
+    url = f"{BASE_URL}quote?symbol={symbol}&token={API_KEY}"
+    response = requests.get(url)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        raise Exception(f"Failed to fetch stock details for {symbol}. HTTP {response.status_code}: {response.text}")
+
 
 def get_user_sectors(ticker_list):
     """Fetch the sectors of user's stocks."""
