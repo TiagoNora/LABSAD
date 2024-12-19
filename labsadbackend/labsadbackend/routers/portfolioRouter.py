@@ -244,7 +244,7 @@ async def recommendStocks(name: str, email: str):
     return recommendations
 
 
-@router.get('PortfolioStockRecommendationbySector', summary="For a specific sector, recommend a stock")
+@router.get('/PortfolioStockRecommendationbySector', summary="For a specific sector, recommend a stock")
 async def recommendStocksBySector(name: str, email: str):
     repo = PortfolioRepo()
     portfolio = repo.getPortfolio(name, email)
