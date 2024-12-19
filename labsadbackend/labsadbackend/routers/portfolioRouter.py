@@ -237,10 +237,10 @@ async def recommendStocks(name: str, email: str):
         tickerList.append(t['symbol'])
 
 
-    result = []
+
     recommendations = recommend_stocks_from_new_sectors(tickerList)
-    result.append(recommendations)
-    return result
+
+    return recommendations
 
 
 ######## Auxiliary functions
@@ -305,12 +305,18 @@ def recommend_stocks_from_new_sectors(user_tickers):
     all_sectors = get_all_sectors()
     uninvested_sectors = all_sectors - user_sectors
 
+    recommendations_list = []
+
     recommendations = {}
+    print(uninvested_sectors)
     for sector in uninvested_sectors:
         # Get high-growth stocks in this sector
-        recommendations[sector] = get_high_growth_stocks(sector)
-    
-    return recommendations
+        recommendations['sector'] = sector
+        recommendations['stocks'] = get_high_growth_stocks(sector)
+        recommendations_list.append(recommendations)
+
+
+    return recommendations_list
 
 
 
