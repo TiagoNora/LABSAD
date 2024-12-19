@@ -250,28 +250,28 @@ async def recommendStocksBySectorForUser(sector: str):
     growth_stocks = []
 
     if sector == "Technology":
-        growth_stocks = ["NVDA", "AMD", "MSFT", "GOOGL", "AAPL"]
+        growth_stocks = ["NVDA-Nvidia", "AMD-Advanced Micro Devices", "MSFT-Microsoft", "GOOGL-Alphabet", "AAPL-Apple"]
     elif sector == "Healthcare":
-        growth_stocks = ["BIIB", "REGN", "VRTX", "PFE", "JNJ"]
+        growth_stocks = ["BIIB-Biogen", "REGN-Regeneron Pharmaceuticals", "VRTX-Vertex Pharmaceuticals", "PFE-Pfizer", "JNJ-Johnson & Johnson"]
     elif sector == "Financials":
-        growth_stocks = ["JPM", "GS", "MS", "C", "WFC"]
+        growth_stocks = ["JPM-JPMorgan Chase", "GS-Goldman Sachs", "MS-Morgan Stanley", "C-Citigroup", "WFC-Wells Fargo"]
     elif sector == "Energy":
-        growth_stocks = ["XOM", "CVX", "SLB", "COP", "ENB"]
+        growth_stocks = ["XOM-Exxon Mobil", "CVX-Chevron", "SLB-Schlumberger", "COP-ConocoPhillips", "ENB-Enbridge"]
     elif sector == "Consumer Discretionary":
-        growth_stocks = ["TSLA", "AMZN", "HD", "NKE", "MCD"]
+        growth_stocks = ["TSLA-Tesla", "AMZN-Amazon", "HD-Home Depot", "NKE-Nike", "MCD-McDonald's"]
     elif sector == "Consumer Staples":
-        growth_stocks = ["PG", "KO", "PEP", "CL", "MO"]
+        growth_stocks = ["PG-Procter & Gamble", "KO-Coca-Cola", "PEP-PepsiCo", "CL-Colgate-Palmolive", "MO-Altria"]
     elif sector == "Industrials":
-        growth_stocks = ["CAT", "BA", "UPS", "DE", "CSX"]
+        growth_stocks = ["CAT-Caterpillar", "BA-Boeing", "UPS-United Parcel Service", "DE-Deere & Company", "CSX-CSX Corporation"]
     elif sector == "Materials":
-        growth_stocks = ["LIN", "APD", "ECL", "DD", "LQD"]
+        growth_stocks = ["LIN-Linde", "APD-Air Products and Chemicals", "ECL-Ecolab", "DD-DuPont", "LQD-iShares Investment Grade Corporate Bond ETF"]
     elif sector == "Utilities":
-        growth_stocks = ["NEE", "DUK", "SO", "XEL", "AWK"]
+        growth_stocks = ["NEE-NextEra Energy", "DUK-Duke Energy", "SO-Southern Company", "XEL-Xcel Energy", "AWK-American Water Works"]
     elif sector == "Real Estate":
-        growth_stocks = ["PLD", "SPG", "AMT", "EQIX", "O"]
+        growth_stocks = ["PLD-Prologis", "SPG-Simon Property Group", "AMT-American Tower", "EQIX-Equinix", "O-Realty Income"]
     elif sector == "Communication Services":
-        growth_stocks = ["DIS", "T", "VZ", "TMUS", "NFLX"]
-    
+        growth_stocks = ["DIS-Disney", "T-AT&T", "VZ-Verizon", "TMUS-T-Mobile", "NFLX-Netflix"]
+
     return growth_stocks
 
 
